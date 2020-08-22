@@ -27,7 +27,18 @@
   justify-content: center;
   align-items: center;
 }
-
+.put {
+  font-size: 32px;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  text-align: center;
+  width: 20%;
+}
+.put:focus,
+.put:focus {
+  outline: none;
+}
 .footer img {
   margin-left: 0.5rem;
 }

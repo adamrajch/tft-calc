@@ -16,16 +16,8 @@ function TFTForm() {
   const [taken, setTaken] = useState(0);
   const [gold, setGold] = useState(0);
   const [dup, setDup] = useState(1);
-  let isCalculated = false;
+  const [calculated, setCalculated] = useState(false);
 
-  const calculate = () => {
-    console.log(isCalculated, " wang");
-    if (isCalculated == false) {
-      isCalculated = true;
-      return;
-    }
-    isCalculated = false;
-  };
   const handleLvl = (e) => {
     const lvl_int = parseInt(e.target.value, 10);
     if (lvl_int >= 1 && lvl_int <= 9) {
@@ -140,7 +132,13 @@ function TFTForm() {
             />
           </div>
           <div>
-            <Button content="Calculate" color="yellow" onClick={calculate} />
+            <Button
+              content="Calculate"
+              color="yellow"
+              onClick={() =>
+                calculated ? setCalculated(false) : setCalculated(true)
+              }
+            />
           </div>
         </Grid.Column>
       </Grid.Row>
@@ -148,6 +146,11 @@ function TFTForm() {
         <Grid.Row>
           <Header as="h2">Specs</Header>
           <div>
+            {calculated === true ? (
+              <div>hello</div>
+            ) : (
+              <div> nothing here boys</div>
+            )}
             champ:{champ} gold: {gold} copies: {dup}
             level: {lvl}
           </div>

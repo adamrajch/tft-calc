@@ -9,11 +9,13 @@ import {
 } from "semantic-ui-react";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
-import Calc from "./calc";
+import calc from "./calc";
+
 function TFTForm() {
   const [champ, setChamp] = useState("");
   const [lvl, setlvl] = useState(1);
   const [taken, setTaken] = useState(0);
+  const [otherTaken, setOtherTaken] = useState(0);
   const [gold, setGold] = useState(0);
   const [dup, setDup] = useState(1);
   const [calculated, setCalculated] = useState(false);
@@ -30,6 +32,10 @@ function TFTForm() {
       setlvl(lvl_int);
     }
   };
+  const handleCalc = () => {
+    console.log(champList);
+  };
+
   return (
     <Grid textAlign="center" columns={2} container>
       <Grid.Row>
@@ -68,7 +74,7 @@ function TFTForm() {
             />
           </div>
           <div>
-            Unit Taken:{" "}
+            Unit Taken:
             <input
               className={styles.put}
               value={taken}
@@ -86,6 +92,26 @@ function TFTForm() {
               color="yellow"
               onClick={() =>
                 taken > 1 ? setTaken(lvl - 1) : console.log(taken)
+              }
+            />
+            Other Taken:
+            <input
+              className={styles.put}
+              value={otherTaken}
+              onChange={(e) => setOtherTaken(e.target.value)}
+            />
+            <Icon
+              name="angle up"
+              color="yellow"
+              onClick={() =>
+                taken < 9 ? setOtherTaken(lvl + 1) : console.log(otherTaken)
+              }
+            />
+            <Icon
+              name="angle down"
+              color="yellow"
+              onClick={() =>
+                taken > 1 ? setOtherTaken(lvl - 1) : console.log(otherTaken)
               }
             />
           </div>
@@ -131,21 +157,13 @@ function TFTForm() {
               onClick={() => (dup >= 2 ? setDup(dup - 1) : console.log(dup))}
             />
           </div>
-<<<<<<< HEAD
           <div>
             <Button
               content="Calculate"
               color="yellow"
-              onClick={() =>
-                calculated ? setCalculated(false) : setCalculated(true)
-              }
+              onClick={() => console.log(calc(lvl))}
             />
           </div>
-=======
-          {/* <div>
-            <Button content="Calculate" color="yellow" onClick={calculate} />
-          </div> */}
->>>>>>> e169a32ef3fd2f7e8ae63d02afa043cd8a7eecbe
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>

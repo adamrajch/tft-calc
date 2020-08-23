@@ -139,9 +139,9 @@ function TFTForm() {
               onClick={() => (dup >= 2 ? setDup(dup - 1) : console.log(dup))}
             />
           </div>
-          <div>
+          {/* <div>
             <Button content="Calculate" color="yellow" onClick={calculate} />
-          </div>
+          </div> */}
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>

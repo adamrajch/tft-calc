@@ -12,13 +12,6 @@ import styles from "../styles/Home.module.css";
 import calc from "./calc";
 
 function TFTForm() {
-  const [champ, setChamp] = useState("");
-  const [lvl, setlvl] = useState(1);
-  const [taken, setTaken] = useState(0);
-  const [otherTaken, setOtherTaken] = useState(0);
-  const [gold, setGold] = useState(0);
-  const [dup, setDup] = useState(1);
-  const [calculated, setCalculated] = useState(false);
   const [form, setForm] = useState({
     champ: "",
     level: 1,
@@ -27,7 +20,6 @@ function TFTForm() {
     gold: 0,
     duplicate: 1,
   });
-  const [help, setHelp] = useState(false);
 
   const updateField = (e) => {
     if (isNaN(parseInt(e.target.value))) {
@@ -47,8 +39,8 @@ function TFTForm() {
         <Grid.Column width={6}>
           <Input
             placeholder="Search unit..."
-            value={champ}
-            onChange={(e) => setChamp(e.target.value)}
+            value={form.champ}
+            onChange={(e) => setForm({ ...form, champ: e.target.value })}
           >
             <input />
             <Button
@@ -248,7 +240,7 @@ function TFTForm() {
             <Button
               content="Calculate"
               color="yellow"
-              onClick={() => console.log(calc(lvl))}
+              onClick={() => console.log(calc(form))}
             />
           </div>
         </Grid.Column>
@@ -256,15 +248,7 @@ function TFTForm() {
       <Grid.Row>
         <Grid.Row>
           <Header as="h2">Specs</Header>
-          <div>
-            {calculated === true ? (
-              <div>hello</div>
-            ) : (
-              <div> nothing here boys</div>
-            )}
-            champ:{champ} gold: {gold} copies: {dup}
-            level: {lvl}
-          </div>
+          <div>{form.champ}</div>
         </Grid.Row>
       </Grid.Row>
     </Grid>

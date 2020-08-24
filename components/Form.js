@@ -161,7 +161,7 @@ function TFTForm() {
             <Button
               content="Calculate"
               color="yellow"
-              onClick={() => console.log(calc(lvl))}
+              onClick={() => console.log(calc(champ, lvl, taken, otherTaken, gold, dup))}
             />
           </div>
         </Grid.Column>

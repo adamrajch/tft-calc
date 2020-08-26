@@ -1,5 +1,5 @@
 import champ_db from '../public/champList.json'
-
+console.log("wang")
 const lvl_db = {
     1: [1, 0, 0, 0, 0],
     2: [1, 0, 0, 0, 0],

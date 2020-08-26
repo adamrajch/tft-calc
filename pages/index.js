@@ -2,7 +2,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Form from "../components/Form";
-export default function Home() {
+import { useEffect } from "react";
+import axios from "axios";
+export default function Home({ units }) {
+  // console.log(units);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,7 +14,7 @@ export default function Home() {
       </Head>
       <Header />
       <div className={styles.content}>
-        <Form />
+        <Form units={units} />
       </div>
 
       <footer className={styles.footer}>
@@ -19,3 +23,11 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getInitialProps = async () => {
+  //fetch data on server
+  const url = "http://localhost:3000/api/units";
+  const response = await axios.get(url);
+  //return response data as an object, merged with existing props
+  return { units: response.data };
+};

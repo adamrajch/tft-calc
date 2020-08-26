@@ -6,13 +6,13 @@ import {
   Button,
   Header,
   Label,
+  Dropdown,
 } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import calc from "./calc";
 
 function TFTForm({ units }) {
-  console.log("form props", units);
   const [form, setForm] = useState({
     champ: "",
     level: 1,
@@ -39,6 +39,20 @@ function TFTForm({ units }) {
       });
     }
   };
+  const testUnit = [
+    {
+      key: "jh",
+      value: "jh",
+      text: "Jhin",
+      image: { avatar: true, src: "/images/jhin_circle_5.png" },
+    },
+    {
+      key: "ne",
+      value: "ne",
+      text: "Neeko",
+      image: { avatar: true, src: "/images/neeko.png" },
+    },
+  ];
   return (
     <Grid textAlign="center" columns={2} container>
       <Grid.Row>
@@ -55,6 +69,13 @@ function TFTForm({ units }) {
               color="green"
             />
           </Input>
+          <Dropdown
+            clearable
+            search
+            selection
+            options={testUnit}
+            placeholder="Select Unit"
+          />
           <div></div>
         </Grid.Column>
         <Grid.Column width={6}>

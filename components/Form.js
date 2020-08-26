@@ -7,11 +7,12 @@ import {
   Header,
   Label,
 } from "semantic-ui-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import calc from "./calc";
 
-function TFTForm() {
+function TFTForm({ units }) {
+  console.log("form props", units);
   const [form, setForm] = useState({
     champ: "",
     level: 1,
@@ -20,6 +21,11 @@ function TFTForm() {
     gold: 0,
     duplicate: 1,
   });
+  let defaultUnits = [];
+  useEffect(() => {
+    getRandomUnits();
+  }, []);
+  const getRandomUnits = () => {};
 
   const updateField = (e) => {
     if (isNaN(parseInt(e.target.value))) {
@@ -49,6 +55,7 @@ function TFTForm() {
               color="green"
             />
           </Input>
+          <div></div>
         </Grid.Column>
         <Grid.Column width={6}>
           <div>

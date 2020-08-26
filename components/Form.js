@@ -13,7 +13,6 @@ import styles from "../styles/Home.module.css";
 import calc from "./calc";
 
 function TFTForm({ units }) {
-  console.log("form props", units);
   const [form, setForm] = useState({
     champ: "",
     level: 1,
@@ -22,11 +21,6 @@ function TFTForm({ units }) {
     gold: 0,
     duplicate: 1,
   });
-  let defaultUnits = [];
-  useEffect(() => {
-    getRandomUnits();
-  }, []);
-  const getRandomUnits = () => {};
 
   const updateField = (e) => {
     if (isNaN(parseInt(e.target.value))) {
@@ -40,18 +34,9 @@ function TFTForm({ units }) {
       });
     }
   };
-  const testUnit = [
-    {
-      key: "jh",
-      value: "jh",
-      text: "Jhin",
-      image: {
-        avatar: true,
-        src:
-          "https://raw.communitydragon.org/10.9/game/assets/characters/graves/hud/graves_circle_2.png",
-      },
-    },
-  ];
+  const handleDrop = (e, { value }) => {
+    setForm({ ...form, champ: value });
+  };
 
   //maps unit list to an array with fields for the drop down
   const unitList = units.map((unit) => {
@@ -69,24 +54,14 @@ function TFTForm({ units }) {
     <Grid textAlign="center" columns={2} container>
       <Grid.Row>
         <Grid.Column width={6}>
-          <Input
-            placeholder="Search unit..."
-            value={form.champ}
-            onChange={(e) => setForm({ ...form, champ: e.target.value })}
-          >
-            <input />
-            <Button
-              icon="search"
-              onClick={() => console.log(champ)}
-              color="green"
-            />
-          </Input>
           <Dropdown
+            onChange={handleDrop}
             clearable
             search
             selection
             options={unitList}
             placeholder="Select Unit"
+            value={form.champ}
           />
           <div></div>
         </Grid.Column>

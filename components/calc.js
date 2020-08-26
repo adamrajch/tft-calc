@@ -5,15 +5,15 @@ const champ_db = {
 };
 
 const lvl_db = {
-    1: [5, 0, 0, 0, 0],
-    2: [5, 0, 0, 0, 0],
-    3: [3.75, 1.25, 0, 0, 0],
-    4: [2.75, 1.5, 0.75, 0, 0],
-    5: [2, 1.75, 1, 0.5, 0],
-    6: [1.25, 1.75, 1.5, 0.5, 0],
-    7: [0.95, 1.5, 1.75, 0.75, 0.05],
-    8: [0.7, 1, 1.75, 1.25, 0.3, 0.75],
-    9: [0.5, 0.75, 1.5, 1.5, 0.75]
+    1: [1, 0, 0, 0, 0],
+    2: [1, 0, 0, 0, 0],
+    3: [0.75, 0.25, 0, 0, 0],
+    4: [0.55, 0.3, 0.15, 0, 0],
+    5: [0.4, 0.35, 0.2, 0.05, 0],
+    6: [0.25, 0.35, 0.3, 0.1, 0],
+    7: [0.19, 0.3, 0.35, 0.15, 0.01],
+    8: [0.14, 0.2, 0.35, 0.25, 0.25, 0.06],
+    9: [0.1, 0.15, 0.3, 0.3, 0.15]
 }
 //   "Illaoi", cost: 1, pool: 29 },
 //   "Jarvan", cost: 1, pool: 29 },
@@ -71,10 +71,12 @@ const lvl_db = {
 //   "Xerath", cost: 5, pool: 10 },
 // ]};
 
-const Calc = (champ, lvl, taken, otherTaken, gold, dup) => {
-    let available = champ_db["caitlyn"].all - taken - otherTaken;
-    let expected = (champ_db["caitlyn"].pool - taken) / available;
-    let cost = champ_db["caitlyn"]["cost"]
-    return expected*lvl_db[lvl][cost-1]
+const Calc = (form) => {
+
+    // let available = champ_db["caitlyn"].all - taken - otherTaken;
+    // let expected = (champ_db["caitlyn"].pool - taken) / available;
+    // let cost = champ_db["caitlyn"]["cost"];
+    // return expected*lvl_db[lvl][cost-1]
+    return lvl
 }
 export default Calc;

@@ -158,7 +158,7 @@ function TFTForm() {
               min="0"
               max="999"
               onChange={updateField}
-              maxlength="3"
+              maxLength="3"
             />
             <Icon
               name="angle up"
@@ -209,7 +209,7 @@ function TFTForm() {
               min="1"
               max="99"
               onChange={updateField}
-              maxlength="1"
+              maxLength="1"
             />
             <Icon
               name="angle up"

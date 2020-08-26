@@ -13,7 +13,7 @@ import styles from "../styles/Home.module.css";
 import calc from "./calc";
 
 function TFTForm({ units }) {
-  // console.log("form props", units);
+  console.log("form props", units);
   const [form, setForm] = useState({
     champ: "",
     level: 1,
@@ -45,15 +45,27 @@ function TFTForm({ units }) {
       key: "jh",
       value: "jh",
       text: "Jhin",
-      image: { avatar: true, src: "/images/jhin_circle_5.png" },
-    },
-    {
-      key: "ne",
-      value: "ne",
-      text: "Neeko",
-      image: { avatar: true, src: "/images/neeko.png" },
+      image: {
+        avatar: true,
+        src:
+          "https://raw.communitydragon.org/10.9/game/assets/characters/graves/hud/graves_circle_2.png",
+      },
     },
   ];
+
+  //maps unit list to an array with fields for the drop down
+  const unitList = units.map((unit) => {
+    return {
+      key: unit.name,
+      value: unit.name,
+      text: unit.name,
+      image: {
+        avatar: true,
+        src:
+          "https://raw.communitydragon.org/10.9/game/assets/characters/graves/hud/graves_circle_2.png",
+      },
+    };
+  });
   return (
     <Grid textAlign="center" columns={2} container>
       <Grid.Row>
@@ -74,7 +86,7 @@ function TFTForm({ units }) {
             clearable
             search
             selection
-            options={testUnit}
+            options={unitList}
             placeholder="Select Unit"
           />
           <div></div>

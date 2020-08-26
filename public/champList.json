@@ -1,150 +1,402 @@
 [
-  {"name": "Caitlyn",
-    "cost":1,
-    "pool":29,
-    "all":377
+  {
+    "name": "Caitlyn",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/caitlyn/hud/caitlyn_circle_11.png"
   },
-  {"name": "Fiora",
-    "cost":1,
-    "pool":29,
-    "all":377
+  {
+    "name": "Fiora",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/fiora/hud/fiora_circle_4.png"
   },
-  {"name": "Graves",
-    "cost":1,
-    "pool":29,
-    "all":377
+  {
+    "name": "Graves",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/graves/hud/graves_circle_2.png"
   },
-  {"name": "Illaoi",
-    "cost":1,
-    "pool":29,
-    "all":377
+  {
+    "name": "Illaoi",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/illaoi/hud/illaoi_circle_2.png"
   },
-  {"name": "Jarvan",
-    "cost":1,
-    "pool":29,"all":377
+  {
+    "name": "Jarvan",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/jarvaniv/hud/jarvaniv_circle_7.png"
   },
-  {"name": "Leona",
-    "cost":1,
-    "pool":29,
-    "all":377},
+  {
+    "name": "Leona",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/leona/hud/leona_circle_8.png"
+  },
 
-  {"name": "Malphite",
-    "cost":1,
-    "pool":29,
-    "all":377},
-  {"name": "Nocturne",
-    "cost":1,
-    "pool":29,
-    "all":377},
-  {"name": "Poppy",
-    "cost":1,
-    "pool":29,
-    "all":377},
-  {"name": "Twisted",
-    "cost":1,
-    "pool":29,
-    "all":377},
-  {"name": "Xayah",
-    "cost":1,
-    "pool":29,
-    "all":377},
-  {"name": "Ziggs",
-    "cost":1,
-    "pool":29,
-    "all":377},
-  {"name": "Zoe",
-    "cost":1,
-    "pool":29,
-    "all":377},
-  {"name": "Lucian",
-    "cost":2,
-    "pool":22,"all":286},
-  {"name": "Kog'Maw",
-    "cost":2,
-    "pool":22,"all":286},
-  {"name": "Ahri",
-    "cost":2,
-    "pool":22,"all":286},
-  {"name": "Blitzcrank","cost":2,
-    "pool":22,"all":286},
-  {"name": "Annie","cost":2,
-    "pool":22,"all":286},
-  {"name": "Darius","cost":2,
-    "pool":22,"all":286},
-  {"name": "Shen","cost":2,
-    "pool":22,"all":286},
-  {"name": "Rakan","cost":2,
-    "pool":22,"all":286},
-  {"name": "Nautilus","cost":2,
-    "pool":22,"all":286},
-  {"name": "Mordekaiser","cost":2,
-    "pool":22,"all":286},
-  {"name": "Xin","cost":2,
-    "pool":22,"all":286},
-  {"name": "Zed","cost":2,
-    "pool":22,"all":286},
-  {"name": "Yasuo","cost":2,
-    "pool":22,"all":286},
-  {"name": "Karma","cost":3,
-    "pool":18,"all":234},
-  {"name": "Jayce","cost":3,
-    "pool":18,"all":234},
-  {"name": "Bard","cost":3,
-    "pool":18,"all":234},
-  {"name": "Ashe","cost":3,
-    "pool":18,"all":234},
-  {"name": "Cassiopeia","cost":3,
-    "pool":18,"all":234},
-  {"name": "Ezreal","cost":3,
-    "pool":18,"all":234},
-  {"name": "Syndra","cost":3,
-    "pool":18,"all":234},
-  {"name": "Shaco","cost":3,
-    "pool":18,"all":234},
-  {"name": "Rumble","cost":3,
-    "pool":18,"all":234},
-  {"name": "Master","cost":3,
-    "pool":18,"all":234},
-  {"name": "Neeko","cost":3,
-    "pool":18,"all":234},
-  {"name": "Vi","cost":3,
-    "pool":18,"all":234},
-  {"name": "Vayne","cost":3,
-    "pool":18,"all":234},
-  {"name": "Jhin","cost":4,
-    "pool":12,"all":120},
-  {"name": "Jinx","cost":4,
-    "pool":12,"all":120},
-  {"name": "Gnar","cost":4,
-    "pool":12,"all":120},
-  {"name": "Irelia","cost":4,
-    "pool":12,"all":120},
-  {"name": "Fizz","cost":4,
-    "pool":12,"all":120},
-  {"name": "Soraka","cost":4,
-    "pool":12,"all":120},
-  {"name": "Riven","cost":4,
-    "pool":12,"all":120},
-  {"name": "Viktor","cost":4,
-    "pool":12,"all":120},
-  {"name": "Teemo","cost":4,
-    "pool":12,"all":120},
-  {"name": "Wukong","cost":4,
-    "pool":12,"all":120},
-  {"name": "Lulu","cost":5,
-    "pool":10,"all":80},
-  {"name": "Janna","cost":5,
-    "pool":10,"all":80},
-  {"name": "Aurelion","cost":5,
-    "pool":10,"all":80},
-  {"name": "Ekko","cost":5,
-    "pool":10,"all":80},
-  {"name": "Gangplank","cost":5,
-    "pool":10,"all":80},
-  {"name": "Urgot","cost":5,
-    "pool":10,"all":80},
-  {"name": "Thresh","cost":5,
-    "pool":10,"all":80},
-  {"name": "Xerath","cost":5,
-    "pool":10,"all":80}
+  {
+    "name": "Malphite",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/malphite/hud/malphite_circle_16.png"
+  },
+  {
+    "name": "Nocturne",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/nocturne/hud/nocturne_circle_5.png"
+  },
+  {
+    "name": "Poppy",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/poppy/hud/poppy_circle_7.png"
+  },
+  {
+    "name": "Twisted Fate",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/twistedfate/hud/twistedfate_circle_11.png"
+  },
+  {
+    "name": "Xayah",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/xayah/hud/xayah_circle_1.png"
+  },
+  {
+    "name": "Ziggs",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/ziggs/hud/ziggs_circle_7.png"
+  },
+  {
+    "name": "Zoe",
+    "cost": 1,
+    "pool": 29,
+    "all": 377,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/zoe/hud/zoe_circle_9.pie_c_9_18.png"
+  },
+  {
+    "name": "Lucian",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/lucian/hud/lucian_circle_6.png"
+  },
+  {
+    "name": "Kog'Maw",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/kogmaw/hud/kogmaw_circle_8.png"
+  },
+  {
+    "name": "Ahri",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/ahri/hud/ahri_circle_14.png"
+  },
+  {
+    "name": "Blitzcrank",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/blitzcrank/hud/blitzcrank_circle_6.png"
+  },
+  {
+    "name": "Annie",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/annie/hud/annie_circle_11.png"
+  },
+  {
+    "name": "Darius",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/darius/hud/darius_circle_14.png"
+  },
+  {
+    "name": "Shen",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/shen/hud/shen_circle_15.png"
+  },
+  {
+    "name": "Rakan",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/rakan/hud/rakan_circle_1.png"
+  },
+  {
+    "name": "Nautilus",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/nautilus/hud/nautilus_circle_3.png"
+  },
+  {
+    "name": "Mordekaiser",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/mordekaiser/hud/mordekaiser_circle_6.pie_c_10_6.png"
+  },
+  {
+    "name": "Xin Zhao",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/xinzhao/hud/xinzhao_circle_20.png"
+  },
+  {
+    "name": "Zed",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/zed/hud/zed_circle_1.png"
+  },
+  {
+    "name": "Yasuo",
+    "cost": 2,
+    "pool": 22,
+    "all": 286,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/yasuo/hud/yasuo_circle_10.png"
+  },
+  {
+    "name": "Karma",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/karma/hud/karma_circle_8.png"
+  },
+  {
+    "name": "Jayce",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/jayce/hud/jayce_circle_3.png"
+  },
+  {
+    "name": "Bard",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/bard/hud/bard_circle_5.png"
+  },
+  {
+    "name": "Ashe",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/ashe/hud/ashe_circle_11.png"
+  },
+  {
+    "name": "Cassiopeia",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/cassiopeia/hud/cassiopeia_circle_8.png"
+  },
+  {
+    "name": "Ezreal",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/ezreal/hud/ezreal_circle_5.png"
+  },
+  {
+    "name": "Syndra",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/syndra/hud/syndra_circle_6.png"
+  },
+  {
+    "name": "Shaco",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/shaco/hud/shaco_circle_8.png"
+  },
+  {
+    "name": "Rumble",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/rumble/hud/rumble_circle_3.png"
+  },
+  {
+    "name": "Master Yi",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/masteryi/hud/masteryi_circle_2.png"
+  },
+  {
+    "name": "Neeko",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/neeko/hud/neeko_circle_10.pie_c_9_18.png"
+  },
+  {
+    "name": "Vi",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/vi/hud/vi_circle_11.png"
+  },
+  {
+    "name": "Vayne",
+    "cost": 3,
+    "pool": 18,
+    "all": 234,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/vayne/hud/vayne_circle_11.png"
+  },
+  {
+    "name": "Jhin",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/jhin/hud/jhin_circle_5.png"
+  },
+  {
+    "name": "Jinx",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/jinx/hud/jinx_circle_13.png"
+  },
+  {
+    "name": "Gnar",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "/https://raw.communitydragon.org/10.9/game/assets/characters/gnar/hud/gnar_circle_13.png"
+  },
+  {
+    "name": "Irelia",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/irelia/hud/irelia_circle_16.png"
+  },
+  {
+    "name": "Fizz",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/fizz/hud/fizz_circle_9.png"
+  },
+  {
+    "name": "Soraka",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/soraka/hud/soraka_circle_7.png"
+  },
+  {
+    "name": "Riven",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/riven/hud/riven_circle_18.png"
+  },
+  {
+    "name": "Viktor",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "/https://raw.communitydragon.org/10.9/game/assets/characters/viktor/hud/viktor_circle_3.png"
+  },
+  {
+    "name": "Teemo",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/teemo/hud/teemo_circle_4.png"
+  },
+  {
+    "name": "Wukong",
+    "cost": 4,
+    "pool": 12,
+    "all": 120,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/tft3_wukong/hud/tft3_wukong_circle.tft_set3.png"
+  },
+  {
+    "name": "Lulu",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/lulu/hud/lulu_circle_14.png"
+  },
+  {
+    "name": "Janna",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/janna/hud/janna_circle_7.png"
+  },
+  {
+    "name": "Aurelion Sol",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/aurelionsol/hud/aurelionsol_circle_2.png"
+  },
+  {
+    "name": "Ekko",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/ekko/hud/ekko_circle_3.png"
+  },
+  {
+    "name": "Gangplank",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/gangplank/hud/gangplank_circle_8.png"
+  },
+  {
+    "name": "Urgot",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/urgot/hud/urgot_circle_3.png"
+  },
+  {
+    "name": "Thresh",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/thresh/hud/thresh_circle_14.prestige_thresh_pulsefire.png"
+  },
+  {
+    "name": "Xerath",
+    "cost": 5,
+    "pool": 10,
+    "all": 80,
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/xerath/hud/xerath_circle_5.skins_xerath_skin05.png"
+  }
 ]

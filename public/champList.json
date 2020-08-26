@@ -292,7 +292,7 @@
     "cost": 4,
     "pool": 12,
     "all": 120,
-    "image": "/https://raw.communitydragon.org/10.9/game/assets/characters/gnar/hud/gnar_circle_13.png"
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/gnar/hud/gnar_circle_13.png"
   },
   {
     "name": "Irelia",
@@ -327,7 +327,7 @@
     "cost": 4,
     "pool": 12,
     "all": 120,
-    "image": "/https://raw.communitydragon.org/10.9/game/assets/characters/viktor/hud/viktor_circle_3.png"
+    "image": "https://raw.communitydragon.org/10.9/game/assets/characters/viktor/hud/viktor_circle_3.png"
   },
   {
     "name": "Teemo",

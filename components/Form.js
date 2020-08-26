@@ -61,8 +61,7 @@ function TFTForm({ units }) {
       text: unit.name,
       image: {
         avatar: true,
-        src:
-          "https://raw.communitydragon.org/10.9/game/assets/characters/graves/hud/graves_circle_2.png",
+        src: unit.image,
       },
     };
   });

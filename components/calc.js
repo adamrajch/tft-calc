@@ -71,12 +71,12 @@ const lvl_db = {
 //   "Xerath", cost: 5, pool: 10 },
 // ]};
 
-const Calc = (form) => {
-
-    // let available = champ_db["caitlyn"].all - taken - otherTaken;
-    // let expected = (champ_db["caitlyn"].pool - taken) / available;
-    // let cost = champ_db["caitlyn"]["cost"];
-    // return expected*lvl_db[lvl][cost-1]
-    return lvl
+const Calc = ({champ, level, taken, otherTaken, gold, duplicate}) => {
+    champ = "caitlyn"
+    let available = champ_db[champ].all - taken - otherTaken;
+    let p_c = (champ_db[champ].pool - taken) / available;
+    let p_s = 1 - Math.pow(1-p_c,5)
+    let cost = champ_db[champ]["cost"];
+    return p_s*lvl_db[level][cost-1]  // factor in level dist
 }
 export default Calc;

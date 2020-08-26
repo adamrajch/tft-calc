@@ -12,7 +12,7 @@ import styles from "../styles/Home.module.css";
 import calc from "./calc";
 
 function TFTForm({ units }) {
-  console.log("form props", units);
+  // console.log("form props", units);
   const [form, setForm] = useState({
     champ: "",
     level: 1,

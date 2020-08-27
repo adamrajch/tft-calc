@@ -61,11 +61,14 @@ const Calc = ({ champ, level, taken, otherTaken, gold, duplicate }) => {
         let roll = 1;
         let roll_probability = 0;
         for (roll=1; roll<=gold/2; roll++) {
-            console.log(roll)
-            roll_probability = Math.pow(p_s_l,roll)*Math.pow(1-p_s_l,(gold/2)-1)*combinations(gold/2,roll)
+            console.log("Roll #: "+String(roll))
+            roll_probability = Math.pow(p_s_l,roll)*Math.pow(1-p_s_l,(gold/2)-roll)*combinations(gold/2,roll)
+            console.log("Roll probability: "+String(roll_probability))
             result = result + roll_probability;
+            console.log("Result: "+String(result))
+            // console.log(String(gold/2)+" choose "+String(roll)+" : "+String(combinations(gold/2, roll)))
         }
-        return result;
+        return Math.round(result*100);
 
     }
     else {return "wang"}

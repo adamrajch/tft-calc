@@ -77,7 +77,7 @@ function TFTForm({ units }) {
     };
   });
   return (
-    <Grid textAlign="center" columns={2} container stackable>
+    <Grid textAlign="center" columns={2} container stackable inverted>
       <Grid.Row>
         <Grid.Column width={3}>
           <Dropdown
@@ -113,8 +113,10 @@ function TFTForm({ units }) {
         </Grid.Column>
         <Grid.Column width={5}>
           <div>
-            Player Level
-            <Image src="/Images/Set3/levelup.png" avatar />:
+            <label className={styles.formlabel}>
+              Player Level <Image src="/Images/Set3/levelup.png" avatar />:
+            </label>
+
             <input
               className={styles.put}
               type="text"
@@ -145,7 +147,7 @@ function TFTForm({ units }) {
             />
           </div>
           <div>
-            Copies Owned:
+            <label className={styles.formlabel}>Copies Owned:</label>
             {/* <Image src="/Images/Set3/galaxy_small_starcluster.png" />: */}
             <input
               className={styles.put}
@@ -177,7 +179,7 @@ function TFTForm({ units }) {
             />
           </div>
           <div>
-            Other Taken :
+            <label className={styles.formlabel}>Other Taken :</label>
             <input
               className={styles.put}
               type="text"
@@ -218,8 +220,10 @@ function TFTForm({ units }) {
             />
           </div>
           <div>
-            Gold
-            <Icon name="bitcoin" size="big" color="yellow" />:{" "}
+            <label className={styles.formlabel}>
+              Gold <Icon name="bitcoin" size="big" color="yellow" />:
+            </label>
+
             <input
               className={styles.put}
               type="text"
@@ -270,8 +274,10 @@ function TFTForm({ units }) {
             />
           </div>
           <div>
-            Copies needed
-            <Icon name="star" color="yellow" />:
+            <label className={styles.formlabel}>
+              Copies needed <Icon name="star" color="yellow" />:
+            </label>
+
             <input
               className={styles.put}
               type="text"
@@ -313,6 +319,7 @@ function TFTForm({ units }) {
         <Button
           content="Calculate"
           color="yellow"
+          inverted
           onClick={() => setAnswer(calc(form))}
         />
       </Grid.Row>
@@ -322,7 +329,7 @@ function TFTForm({ units }) {
             <Statistic
               horizontal
               value={answer}
-              label={<Icon name="percent" size="large" />}
+              label={<Icon name="percent" size="large" inverted />}
               color="yellow"
             />
           ) : (

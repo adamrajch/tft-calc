@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 .content {
   width: 100%;
@@ -34,6 +35,15 @@
   border-right-style: hidden;
   text-align: center;
   width: 20%;
+  color: white;
+  background-color: transparent;
+}
+.formlabel {
+  color: white;
+  font-size: 18px;
+}
+.header {
+  margin-bottom: 3em;
 }
 .put:focus,
 .put:focus {

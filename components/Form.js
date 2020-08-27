@@ -7,6 +7,8 @@ import {
   Header,
   Label,
   Dropdown,
+  Item,
+  Image,
 } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
@@ -14,14 +16,16 @@ import calc from "./calc";
 
 function TFTForm({ units }) {
   const [form, setForm] = useState({
-    champ: "",
+    champ: { name: "" },
     level: 1,
-    taken: 0,
+    taken: 1,
     otherTaken: 0,
-    gold: 0,
+    gold: 2,
     duplicate: 1,
   });
-
+  useEffect(() => {
+    console.log(form);
+  }, [form.champ]);
   const updateField = (e) => {
     if (isNaN(parseInt(e.target.value))) {
       console.log("value ", e.target.value);
@@ -35,7 +39,25 @@ function TFTForm({ units }) {
     }
   };
   const handleDrop = (e, { value }) => {
-    setForm({ ...form, champ: value });
+    const selected = units.find((champ) => champ.name === value);
+    if (selected === undefined) {
+      setForm({ ...form, champ: { name: "" } });
+    } else {
+      if (selected.cost === 1) {
+        setForm({ ...form, champ: selected, level: 1 });
+      } else if (selected.cost === 2) {
+        setForm({ ...form, champ: selected, level: 2 });
+      } else if (selected.cost === 3) {
+        setForm({ ...form, champ: selected, level: 3 });
+      } else if (selected.cost === 4) {
+        setForm({ ...form, champ: selected, level: 6 });
+      } else if (selected.cost === 5) {
+        setForm({ ...form, champ: selected, level: 7 });
+      }
+
+      // console.log(selected);
+    }
+    // setForm({ ...form, champ: selected });
   };
 
   //maps unit list to an array with fields for the drop down
@@ -61,9 +83,28 @@ function TFTForm({ units }) {
             selection
             options={unitList}
             placeholder="Select Unit"
-            value={form.champ}
+            value={form.champ.name}
           />
-          <div></div>
+          {form.champ.image ? (
+            <Item>
+              <Item.Image src={form.champ.image} />
+
+              <Item.Content>
+                <Item.Header>
+                  <h1>{form.champ.name}</h1>
+                </Item.Header>
+                <Item.Meta>
+                  {form.champ.cost} <Icon name="bitcoin" color="yellow" />
+                </Item.Meta>
+                {/* <Item.Description>
+          <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+        </Item.Description>
+        <Item.Extra>Additional Details</Item.Extra> */}
+              </Item.Content>
+            </Item>
+          ) : (
+            <></>
+          )}
         </Grid.Column>
         <Grid.Column width={6}>
           <div>
@@ -263,7 +304,7 @@ function TFTForm({ units }) {
       <Grid.Row>
         <Grid.Row>
           <Header as="h2">Specs</Header>
-          <div>{form.champ}</div>
+          {/* <div>{form.champ}</div> */}
         </Grid.Row>
       </Grid.Row>
     </Grid>

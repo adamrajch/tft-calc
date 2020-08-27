@@ -12,6 +12,28 @@ const lvl_db = {
   9: [0.1, 0.15, 0.3, 0.3, 0.15],
 };
 
+function product_Range(a,b) {
+  var prd = a,i = a;
+ 
+  while (i++< b) {
+    prd*=i;
+  }
+  return prd;
+};
+
+function combinations(n, r) 
+{
+  if (n==r) 
+  {
+    return 1;
+  } 
+  else 
+  {
+    r=(r < n-r) ? n-r : r;
+    return product_Range(r+1, n)/product_Range(1,n-r);
+  }
+};
+
 const rand_set = () => {
   let one_costs = champ_db.filter((one_cost) => one_cost.cost == 1);
   let rand_one = one_costs[Math.floor(Math.random() * one_costs.length)];
@@ -28,12 +50,25 @@ const rand_set = () => {
 };
 
 const Calc = ({ champ, level, taken, otherTaken, gold, duplicate }) => {
-  let result = champ_db.filter((champ_name) => champ_name.name == "Caitlyn");
-  let available = result[0].all - taken - otherTaken;
-  let p_c = (result[0].pool - taken) / available;
-  let p_s = 1 - Math.pow(1 - p_c, 5);
-  let cost = result[0].cost;
-  return p_s * lvl_db[level][cost - 1]; // factor in level dist
+    // return gold;
+    if (duplicate == 1) {
+        let available = champ.all - taken - otherTaken;
+        let p_c = (champ.pool - taken) / available; // probability to get in a cell
+        let p_s = 1 - Math.pow(1 - p_c, 5); // probability to get in a shop. not taking into account cost dist
+        let cost = champ.cost;
+        let p_s_l = p_s*lvl_db[level][cost - 1]; // probability to get in a shop taking into account level dist
+        let result = 0;
+        let roll = 1;
+        let roll_probability = 0;
+        for (roll=1; roll<=gold/2; roll++) {
+            console.log(roll)
+            roll_probability = Math.pow(p_s_l,roll)*Math.pow(1-p_s_l,(gold/2)-1)*combinations(gold/2,roll)
+            result = result + roll_probability;
+        }
+        return result;
+
+    }
+    else {return "wang"}
   // let wang = rand_set();
   // return wang
 };

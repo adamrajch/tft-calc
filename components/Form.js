@@ -9,6 +9,9 @@ import {
   Dropdown,
   Item,
   Image,
+  Card,
+  Popup,
+  Statistic,
 } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
@@ -23,6 +26,7 @@ function TFTForm({ units }) {
     gold: 2,
     duplicate: 1,
   });
+  const [answer, setAnswer] = useState(null);
   useEffect(() => {
     console.log(form);
   }, [form.champ]);
@@ -46,11 +50,11 @@ function TFTForm({ units }) {
       if (selected.cost === 1) {
         setForm({ ...form, champ: selected, level: 1 });
       } else if (selected.cost === 2) {
-        setForm({ ...form, champ: selected, level: 2 });
-      } else if (selected.cost === 3) {
         setForm({ ...form, champ: selected, level: 3 });
+      } else if (selected.cost === 3) {
+        setForm({ ...form, champ: selected, level: 4 });
       } else if (selected.cost === 4) {
-        setForm({ ...form, champ: selected, level: 6 });
+        setForm({ ...form, champ: selected, level: 5 });
       } else if (selected.cost === 5) {
         setForm({ ...form, champ: selected, level: 7 });
       }
@@ -73,9 +77,9 @@ function TFTForm({ units }) {
     };
   });
   return (
-    <Grid textAlign="center" columns={2} container>
+    <Grid textAlign="center" columns={2} container stackable>
       <Grid.Row>
-        <Grid.Column width={6}>
+        <Grid.Column width={3}>
           <Dropdown
             onChange={handleDrop}
             clearable
@@ -85,30 +89,32 @@ function TFTForm({ units }) {
             placeholder="Select Unit"
             value={form.champ.name}
           />
+        </Grid.Column>
+        <Grid.Column width={3}>
           {form.champ.image ? (
-            <Item>
-              <Item.Image src={form.champ.image} />
+            // <Item>
+            //   <Item.Image src={form.champ.image} />
 
-              <Item.Content>
-                <Item.Header>
-                  <h1>{form.champ.name}</h1>
-                </Item.Header>
-                <Item.Meta>
-                  {form.champ.cost} <Icon name="bitcoin" color="yellow" />
-                </Item.Meta>
-                {/* <Item.Description>
-          <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-        </Item.Description>
-        <Item.Extra>Additional Details</Item.Extra> */}
-              </Item.Content>
-            </Item>
+            //   <Item.Content>
+            //     <Item.Header>
+            //       <h1>{form.champ.name}</h1>
+            //     </Item.Header>
+            //     <Item.Meta>
+            //       {form.champ.cost} <Icon name="bitcoin" color="yellow" />
+            //     </Item.Meta>
+
+            //   </Item.Content>
+
+            // </Item>
+            <div></div>
           ) : (
             <></>
           )}
         </Grid.Column>
-        <Grid.Column width={6}>
+        <Grid.Column width={5}>
           <div>
-            Player Level:
+            Player Level
+            <Image src="/Images/Set3/levelup.png" avatar />:
             <input
               className={styles.put}
               type="text"
@@ -139,7 +145,8 @@ function TFTForm({ units }) {
             />
           </div>
           <div>
-            Unit Taken:
+            Copies Owned:
+            {/* <Image src="/Images/Set3/galaxy_small_starcluster.png" />: */}
             <input
               className={styles.put}
               type="text"
@@ -168,7 +175,9 @@ function TFTForm({ units }) {
                   : console.log(form.taken)
               }
             />
-            Other Taken:
+          </div>
+          <div>
+            Other Taken :
             <input
               className={styles.put}
               type="text"
@@ -203,9 +212,14 @@ function TFTForm({ units }) {
                   : console.log(form.otherTaken)
               }
             />
+            <Popup
+              content="Any units of the same cost owned by opponents"
+              trigger={<Icon name="exclamation circle" color="blue" />}
+            />
           </div>
           <div>
-            Gold:{" "}
+            Gold
+            <Icon name="bitcoin" size="big" color="yellow" />:{" "}
             <input
               className={styles.put}
               type="text"
@@ -256,7 +270,8 @@ function TFTForm({ units }) {
             />
           </div>
           <div>
-            Copies needed:{" "}
+            Copies needed
+            <Icon name="star" color="yellow" />:
             <input
               className={styles.put}
               type="text"
@@ -292,21 +307,34 @@ function TFTForm({ units }) {
               }
             />
           </div>
-          <div>
-            <Button
-              content="Calculate"
-              color="yellow"
-              onClick={() => console.log(calc(form))}
-            />
-          </div>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
-        <Grid.Row>
-          <Header as="h2">Specs</Header>
-          {/* <div>{form.champ}</div> */}
-        </Grid.Row>
+        <Button
+          content="Calculate"
+          color="yellow"
+          onClick={() => setAnswer(calc(form))}
+        />
       </Grid.Row>
+      <div className="result">
+        <Grid.Row>
+          {answer ? (
+            <Statistic
+              horizontal
+              value={answer}
+              label={<Icon name="percent" size="large" />}
+              color="yellow"
+            />
+          ) : (
+            <></>
+          )}
+        </Grid.Row>
+        <style jsx>{`
+          .result {
+            margin-top: 2em;
+          }
+        `}</style>
+      </div>
     </Grid>
   );
 }

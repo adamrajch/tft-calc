@@ -9,10 +9,8 @@ import {
   Dropdown,
   Item,
   Image,
-  Card,
   Popup,
   Statistic,
-  List,
 } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
@@ -22,23 +20,48 @@ function TFTForm({ units }) {
   const [form, setForm] = useState({
     champ: { name: "" },
     level: 1,
-    taken: 1,
+    taken: 0,
     otherTaken: 0,
     gold: 2,
     duplicate: 1,
   });
   const [answer, setAnswer] = useState(null);
   const calculate = () => {
-    if (!form.champ.name === "") {
-    } else {
+    if (form.gold < 2) {
+      setForm({ ...form, gold: 2 });
+    }
+
+    if (form.champ.cost) {
       setAnswer(calc(form));
     }
   };
-  // useEffect(() => {
-  //   if (answer !== null) {
-  //     calc(form);
-  //   }
-  // }, [form]);
+  useEffect(() => {
+    console.log(answer);
+  }, [answer]);
+
+  useEffect(() => {
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.level]);
+  useEffect(() => {
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.taken]);
+  useEffect(() => {
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.otherTaken]);
+  useEffect(() => {
+    if (answer) {
+      if (form.gold === 1) {
+      } else {
+        setAnswer(calc(form));
+      }
+    }
+  }, [form.gold]);
 
   const updateField = (e) => {
     if (isNaN(parseInt(e.target.value))) {
@@ -130,38 +153,50 @@ function TFTForm({ units }) {
             options={unitList}
             placeholder="Select Unit"
             value={form.champ.name}
+            fluid
           />
         </Grid.Column>
         <Grid.Column width={3}></Grid.Column>
         <Grid.Column width={5}>
           <div className={styles.border}>
             <div>
-              <label className={styles.formlabel}>
-                Player Level <Image src="/Images/Set3/levelup.png" avatar />:
-              </label>
+              <Item.Group unstackable>
+                <label className={styles.formlabel}>
+                  Player Level <Image src="/Images/Set3/levelup.png" avatar />:
+                </label>
 
-              <input
-                className={styles.put}
-                type="text"
-                name="level"
-                value={form.level}
-                min="1"
-                max="9"
-                onChange={updateField}
-                maxLength="1"
-              />
-              <List>
-                <Icon
-                  name="angle up"
-                  color="yellow"
-                  onClick={() =>
-                    form.level < 9
-                      ? setForm((prev) => ({ ...prev, level: prev.level + 1 }))
-                      : console.log(form.level)
-                  }
+                <input
+                  className={styles.put}
+                  type="text"
+                  name="level"
+                  value={form.level}
+                  min="1"
+                  max="9"
+                  onChange={updateField}
+                  maxLength="1"
                 />
-                <Icon name="angle down" color="yellow" onClick={handleLevel} />
-              </List>
+                <Item>
+                  <Icon
+                    name="angle up"
+                    color="yellow"
+                    onClick={() =>
+                      form.level < 9
+                        ? setForm((prev) => ({
+                            ...prev,
+                            level: prev.level + 1,
+                          }))
+                        : console.log(form.level)
+                    }
+                  />
+                </Item>
+                <Item>
+                  <Icon
+                    name="angle down"
+                    color="yellow"
+                    onClick={handleLevel}
+                  />
+                </Item>
+              </Item.Group>
             </div>
             <div>
               <label className={styles.formlabel}>Copies Owned:</label>
@@ -190,7 +225,7 @@ function TFTForm({ units }) {
                 name="angle down"
                 color="yellow"
                 onClick={() =>
-                  form.taken > 1
+                  form.taken >= 1
                     ? setForm((prev) => ({ ...prev, taken: prev.taken - 1 }))
                     : console.log(form.taken)
                 }
@@ -233,7 +268,7 @@ function TFTForm({ units }) {
                 }
               />
               <Popup
-                content="Any units of the same cost owned by opponents"
+                content="Any units of the same cost that are taken out of the pool"
                 trigger={<Icon name="exclamation circle" color="blue" />}
               />
             </div>
@@ -275,7 +310,7 @@ function TFTForm({ units }) {
                 name="angle down"
                 color="yellow"
                 onClick={() =>
-                  form.gold >= 2
+                  form.gold >= 4
                     ? setForm((prev) => ({ ...prev, gold: prev.gold - 2 }))
                     : console.log("hello there")
                 }
@@ -290,8 +325,12 @@ function TFTForm({ units }) {
                     : console.log("hello there")
                 }
               />
+              <Popup
+                content="Need atleast 2 Gold to roll for new units"
+                trigger={<Icon name="exclamation circle" color="blue" />}
+              />
             </div>
-            <div>
+            {/* <div>
               <label className={styles.formlabel}>
                 Copies needed <Icon name="star" color="yellow" />:
               </label>
@@ -330,7 +369,7 @@ function TFTForm({ units }) {
                     : console.log("hello there")
                 }
               />
-            </div>
+            </div> */}
           </div>
         </Grid.Column>
       </Grid.Row>
@@ -340,6 +379,7 @@ function TFTForm({ units }) {
           color="yellow"
           inverted
           onClick={calculate}
+          size="large"
         />
       </Grid.Row>
       <div className="result">
@@ -348,23 +388,39 @@ function TFTForm({ units }) {
             <div className={styles.answer}>
               <Item>
                 <Item.Image src={form.champ.image} />
-
                 <Item.Content>
                   <Item.Header>
                     <h1 className={styles.boxheader}>{form.champ.name}</h1>
                   </Item.Header>
                 </Item.Content>
               </Item>
-              <Statistic
-                horizontal
-                value={answer}
-                label={<Icon name="percent" size="large" inverted />}
-                color="yellow"
-              />
+              <Statistic.Group>
+                <Statistic
+                  horizontal
+                  value={answer[0]}
+                  label={<Icon name="percent" size="large" inverted />}
+                  color="yellow"
+                />
+                <Statistic
+                  horizontal
+                  value={answer[1]}
+                  label={<Icon name="percent" size="large" inverted />}
+                  color="yellow"
+                />
+                <Statistic
+                  horizontal
+                  value={answer[2]}
+                  label={<Icon name="percent" size="large" inverted />}
+                  color="yellow"
+                />
+              </Statistic.Group>
             </div>
           ) : (
             <>
-              <div>hi</div>
+              <div className={styles.border}>
+                Calculate the probability to be offered 1 to 3 copies of the
+                desired unit given the game state
+              </div>
             </>
           )}
         </Grid.Row>

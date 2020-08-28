@@ -1,5 +1,3 @@
-import champ_db from "../public/champList.json";
-console.log("wang");
 const lvl_db = {
   1: [1, 0, 0, 0, 0],
   2: [1, 0, 0, 0, 0],
@@ -34,6 +32,17 @@ function combinations(n, r)
   }
 };
 
+var f = [];
+function factorial (n) {
+  if (n == 0 || n == 1) {
+    return 1;
+  }
+  if (f[n] > 0) {
+    return f[n];
+  }
+  return f[n] = factorial(n-1) * n;
+}
+
 const rand_set = () => {
   let one_costs = champ_db.filter((one_cost) => one_cost.cost == 1);
   let rand_one = one_costs[Math.floor(Math.random() * one_costs.length)];
@@ -50,25 +59,46 @@ const rand_set = () => {
 };
 
 const Calc = ({ champ, level, taken, otherTaken, gold, duplicate }) => {
-    // return gold;
-    if (duplicate == 1) {
-        let available = champ.all - taken - otherTaken;
-        let p_c = (champ.pool - taken) / available; // probability to get in a cell
-        let p_s = 1 - Math.pow(1 - p_c, 5); // probability to get in a shop. not taking into account cost dist
-        let cost = champ.cost;
-        let p_s_l = p_s*lvl_db[level][cost - 1]; // probability to get in a shop taking into account level dist
-        let result = 0;
-        let roll = 1;
-        let roll_probability = 0;
-        for (roll=1; roll<=gold/2; roll++) {
-            roll_probability = Math.pow(p_s_l,roll)*Math.pow(1-p_s_l,(gold/2)-roll)*combinations(gold/2,roll)
-            result = result + roll_probability;
-        }
-        return Math.round(result*100);
-
+    // console.log("fact: "+String(factorial(0)))
+    let cost = champ.cost
+    let available = champ.all - taken - otherTaken;
+    let p_c = ((champ.pool - taken) / available)*lvl_db[level][cost - 1]; // probability to get in a cell
+    let p_s_zero = Math.pow(1-p_c,5); // probability to get 0 in shop
+    let p_s_one = 1 - p_s_zero; // probability to get in at least 1 in shop
+    let p_s_one_e = Math.pow(p_c, 1)*Math.pow(1 - p_c, 4)*combinations(5,1); // probability to get exactly 1 in shop
+    let p_s_two = 1 - Math.pow(1 - p_c, 5) - Math.pow(p_c,1)*Math.pow(1-p_c, 4)*combinations(5,1); // probability to get at least 2 in a shop
+    let p_s_two_e = Math.pow(p_c,2)*Math.pow(1-p_c,3)*combinations(5,2)
+    // console.log("pc: "+String(p_c));
+    // console.log("zero shop: "+String(p_s_zero))
+    // console.log("one e: "+String(p_s_one_e));
+    // console.log("two e: "+String(p_s_two_e));
+    let first_result = 100*(1 - Math.pow(p_s_zero, gold/2)); // p(X>=1) = 1 - p(X=0)
+            // p(X>=2) = 1 - p(X=0) - p(X=1)
+    let result_two_zero = Math.pow(p_s_zero, gold/2); // p(x=0)
+    let result_two_one = Math.pow(p_s_one_e,1)*Math.pow(p_s_zero, (gold/2)-1)*combinations(gold/2,1); // p(x=1)
+    let second_result = 100*(1 - result_two_zero - result_two_one);
+    // console.log("g/2: "+String(factorial((gold/2)-2)));
+    let result_three_zero = Math.pow(p_s_zero, gold/2); // p(x=0)
+    let result_three_one = Math.pow(p_s_one_e,1)*Math.pow(p_s_zero, (gold/2)-1)*combinations((gold/2),1); // p(x=1)
+    let result_three_two_one = 0;
+    if (gold === 2) {
+        result_three_two_one = 0;
+    } else {
+        // result_two_one = Math.pow(p_s_one_e,2)*Math.pow(p_s_zero, (gold/2)-2)*factorial(gold/2)/factorial((gold/2)-2);
+        result_three_two_one = Math.pow(p_s_one_e,2)*Math.pow(p_s_zero, (gold/2)-2)*combinations(gold/2,2);
     }
-    else {return "wang"}
+    let result_three_two_two = Math.pow(p_s_two_e,1)*Math.pow(p_s_zero, (gold/2)-1)*combinations((gold/2),1);
+    // console.log("zero total: "+String(result_zero));
+    // console.log("one total: "+String(result_one));
+    // console.log("two one: "+String(result_two_one));
+    // console.log("two two: "+String(result_two_two));
+    // console.log("FINAL ANSWER: "+String(1-result_zero-result_one-result_two_one-result_two_two))
+    let third_result =  100*(1-result_three_zero-result_three_one-result_three_two_one-result_three_two_two);
+    console.log([first_result, second_result, third_result])
+    return [first_result, second_result, third_result];
+    }
+  
+    
   // let wang = rand_set();
   // return wang
-};
 export default Calc;

@@ -1,3 +1,5 @@
+import { Popup } from "semantic-ui-react";
+
 const lvl_db = {
   1: [1, 0, 0, 0, 0],
   2: [1, 0, 0, 0, 0],
@@ -56,6 +58,9 @@ const rand_set = () => {
 };
 
 const Calc = ({ champ, level, taken, otherTaken, gold, duplicate }) => {
+  if (gold % 2 === 1) {
+    gold = gold - 1;
+  }
   // console.log("fact: "+String(factorial(0)))
   let cost = champ.cost;
   let available = champ.all - taken - otherTaken;
@@ -113,11 +118,35 @@ const Calc = ({ champ, level, taken, otherTaken, gold, duplicate }) => {
       result_three_two_one -
       result_three_two_two);
   console.log([first_result, second_result, third_result]);
-  return [
-    first_result.toFixed(2),
-    second_result.toFixed(2),
-    third_result.toFixed(2),
-  ];
+
+  let returnedAnswer = [first_result, second_result, third_result];
+  console.log(returnedAnswer);
+  for (let i = 0; i < returnedAnswer.length; i++) {
+    //if you can round normally
+    if (returnedAnswer[i] >= 1) {
+      returnedAnswer[i] = returnedAnswer[i].toFixed(2);
+    }
+    //find the first non 0 digit and round after than index
+    else {
+      let str = returnedAnswer[i].toString();
+
+      for (let k = 0; k < str.length; k++) {
+        if (str[k] !== "0" && str[k] !== ".") {
+          console.log(returnedAnswer[i]);
+          returnedAnswer[i] = returnedAnswer[i].toFixed(k);
+          break;
+        }
+      }
+    }
+  }
+
+  // return [
+  //   first_result.toFixed(2),
+  //   second_result.toFixed(2),
+  //   third_result.toFixed(2),
+  // ];
+  console.log(returnedAnswer);
+  return returnedAnswer;
 };
 
 // let wang = rand_set();

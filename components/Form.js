@@ -36,6 +36,11 @@ function TFTForm({ units }) {
     }
   };
   useEffect(() => {
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.champ]);
+  useEffect(() => {
     console.log(answer);
   }, [answer]);
 

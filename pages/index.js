@@ -12,14 +12,16 @@ export default function Home({ units }) {
       <Head>
         <title>TFT Calc</title>
       </Head>
-      <Header />
-      <div className={styles.content}>
-        <Form units={units} />
+      <div className={styles.blur}>
+        <Header />
+        <div className={styles.content}>
+          <Form units={units} />
+        </div>
       </div>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <span>Rajchwald Bros</span>
-      </footer>
+      </footer> */}
     </div>
   );
 }

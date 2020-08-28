@@ -1,14 +1,45 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
+  padding: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/Images/Set3/splash1.jpg");
+
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; */
+  /* align-items: center; */
+  /* background-color: black; */
 }
 .content {
   width: 100%;
-  min-height: 70vh;
+  min-height: 90vh;
+  padding-top: 4em;
+  /* background: rgba(57, 14, 14, 0.2);
+  backdrop-filter: blur(6px); */
+
+  /* background: rgba(255, 255, 255, 0.2); */
+}
+.header {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  color: white;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blur {
+  background: rgba(57, 14, 14, 0.2);
+  backdrop-filter: blur(6px);
+}
+.logo {
+  font-size: 38px;
+  text-shadow: white 0px 0px 10px;
+  text-transform: uppercase;
 }
 .main {
   /* padding: 5rem 0; */
@@ -18,7 +49,13 @@
   justify-content: center;
   align-items: center;
 }
-
+.border {
+  border: 1px solid gold;
+  border-radius: 1em;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 1em 0em;
+}
 .footer {
   width: 100%;
   height: 100px;
@@ -27,6 +64,9 @@
   justify-content: center;
   align-items: center;
 }
+.boxheader {
+  color: white;
+}
 .put {
   font-size: 32px;
   border-top-style: hidden;
@@ -34,7 +74,14 @@
   border-right-style: hidden;
   text-align: center;
   width: 20%;
+  color: white;
+  background-color: transparent;
 }
+.formlabel {
+  color: white;
+  font-size: 18px;
+}
+
 .put:focus,
 .put:focus {
   outline: none;
@@ -42,7 +89,13 @@
 .footer img {
   margin-left: 0.5rem;
 }
-
+.answer {
+  border: 2px solid gold;
+  border-radius: 1em;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
 .footer a {
   display: flex;
   justify-content: center;
@@ -123,10 +176,6 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
 }
 
 @media (max-width: 600px) {

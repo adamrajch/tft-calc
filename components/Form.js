@@ -149,7 +149,7 @@ function TFTForm({ units }) {
   return (
     <Grid textAlign="center" columns={2} container stackable inverted>
       <Grid.Row>
-        <Grid.Column width={3}>
+        <Grid.Column width={5}>
           <Dropdown
             onChange={handleDrop}
             clearable
@@ -161,7 +161,7 @@ function TFTForm({ units }) {
             fluid
           />
         </Grid.Column>
-        <Grid.Column width={3}></Grid.Column>
+        {/* <Grid.Column width={3}></Grid.Column> */}
         <Grid.Column width={5}>
           <div className={styles.border}>
             <div>
@@ -381,7 +381,7 @@ function TFTForm({ units }) {
       <Grid.Row>
         <Button
           content="Calculate"
-          color="yellow"
+          color="teal"
           inverted
           onClick={calculate}
           size="large"
@@ -390,35 +390,41 @@ function TFTForm({ units }) {
       <div className="result">
         <Grid.Row>
           {answer !== null ? (
-            <div className={styles.answer}>
-              <Item>
-                <Item.Image src={form.champ.image} />
-                <Item.Content>
-                  <Item.Header>
-                    <h1 className={styles.boxheader}>{form.champ.name}</h1>
-                  </Item.Header>
-                </Item.Content>
-              </Item>
-              <Statistic.Group>
-                <Statistic
-                  horizontal
-                  value={answer[0]}
-                  label={<Icon name="percent" size="large" inverted />}
-                  color="yellow"
-                />
-                <Statistic
-                  horizontal
-                  value={answer[1]}
-                  label={<Icon name="percent" size="large" inverted />}
-                  color="yellow"
-                />
-                <Statistic
-                  horizontal
-                  value={answer[2]}
-                  label={<Icon name="percent" size="large" inverted />}
-                  color="yellow"
-                />
-              </Statistic.Group>
+            <div className={styles.boxanswer}>
+              Probability to be offered 1 to 3 copies based on game state
+              <div className={styles.answer}>
+                <Item>
+                  <Item.Image src={form.champ.image} />
+                  <Item.Content>
+                    <Item.Header>
+                      <h1 className={styles.boxheader}>{form.champ.name}</h1>
+                    </Item.Header>
+                  </Item.Content>
+                </Item>
+                <Statistic.Group>
+                  {answer.map((stat, i) => {
+                    if (i == 0) {
+                      return (
+                        <Statistic color="yellow" inverted>
+                          <Statistic.Label color="yellow">
+                            {i + 1} Copy
+                          </Statistic.Label>
+                          <Statistic.Value>{stat}%</Statistic.Value>
+                        </Statistic>
+                      );
+                    } else {
+                      return (
+                        <Statistic color="yellow" inverted>
+                          <Statistic.Label color="yellow">
+                            {i + 1} Copies
+                          </Statistic.Label>
+                          <Statistic.Value>{stat}%</Statistic.Value>
+                        </Statistic>
+                      );
+                    }
+                  })}
+                </Statistic.Group>
+              </div>
             </div>
           ) : (
             <>

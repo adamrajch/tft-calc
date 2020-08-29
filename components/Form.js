@@ -41,7 +41,7 @@ function TFTForm({ units }) {
     }
   }, [form.champ]);
   useEffect(() => {
-    console.log(answer);
+    // console.log(answer);
   }, [answer]);
 
   useEffect(() => {

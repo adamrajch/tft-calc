@@ -35,6 +35,7 @@ function TFTForm({ units }) {
       setAnswer(calc(form));
     }
   };
+
   useEffect(() => {
     if (answer) {
       setAnswer(calc(form));
@@ -134,6 +135,7 @@ function TFTForm({ units }) {
       }
     }
   };
+  const handleOtherTaken = () => {};
   //maps unit list to an array with fields for the drop down
   const unitList = units.map((unit) => {
     return {
@@ -165,7 +167,7 @@ function TFTForm({ units }) {
         <Grid.Column width={5}>
           <div className={styles.border}>
             <div>
-              <Item.Group unstackable>
+              <div className={styles.formdiv}>
                 <label className={styles.formlabel}>
                   Player Level <Image src="/Images/Set3/levelup.png" avatar />:
                 </label>
@@ -180,31 +182,33 @@ function TFTForm({ units }) {
                   onChange={updateField}
                   maxLength="1"
                 />
-                <Item>
-                  <Icon
-                    name="angle up"
-                    color="yellow"
-                    onClick={() =>
-                      form.level < 9
-                        ? setForm((prev) => ({
-                            ...prev,
-                            level: prev.level + 1,
-                          }))
-                        : console.log(form.level)
-                    }
-                  />
-                </Item>
-                <Item>
-                  <Icon
-                    name="angle down"
-                    color="yellow"
-                    onClick={handleLevel}
-                  />
-                </Item>
-              </Item.Group>
+                <span className={styles.stack}>
+                  <Item>
+                    <Icon
+                      name="angle up"
+                      color="yellow"
+                      onClick={() =>
+                        form.level < 9
+                          ? setForm((prev) => ({
+                              ...prev,
+                              level: prev.level + 1,
+                            }))
+                          : console.log(form.level)
+                      }
+                    />
+                  </Item>
+                  <Item>
+                    <Icon
+                      name="angle down"
+                      color="yellow"
+                      onClick={handleLevel}
+                    />
+                  </Item>
+                </span>
+              </div>
             </div>
-            <div>
-              <label className={styles.formlabel}>Copies Owned:</label>
+            <div className={styles.formdiv}>
+              <label className={styles.formlabel}>Copies Taken :</label>
 
               <input
                 className={styles.put}
@@ -216,28 +220,35 @@ function TFTForm({ units }) {
                 onChange={updateField}
                 maxLength="2"
               />
-
-              <Icon
-                name="angle up"
-                color="yellow"
-                onClick={() =>
-                  form.taken < 50
-                    ? setForm((prev) => ({ ...prev, taken: prev.taken + 1 }))
-                    : console.log(form.taken)
-                }
-              />
-              <Icon
-                name="angle down"
-                color="yellow"
-                onClick={() =>
-                  form.taken >= 1
-                    ? setForm((prev) => ({ ...prev, taken: prev.taken - 1 }))
-                    : console.log(form.taken)
-                }
+              <span className={styles.stack}>
+                <Icon
+                  name="angle up"
+                  color="yellow"
+                  onClick={() =>
+                    form.taken < 50
+                      ? setForm((prev) => ({ ...prev, taken: prev.taken + 1 }))
+                      : console.log(form.taken)
+                  }
+                />
+                <Icon
+                  name="angle down"
+                  color="yellow"
+                  onClick={() =>
+                    form.taken >= 1
+                      ? setForm((prev) => ({ ...prev, taken: prev.taken - 1 }))
+                      : console.log(form.taken)
+                  }
+                />
+              </span>
+              <Popup
+                content="Chosen unit owned by you or other players"
+                trigger={<Icon name="exclamation circle" color="blue" />}
               />
             </div>
-            <div>
-              <label className={styles.formlabel}>Other Taken :</label>
+            <div className={styles.formdiv}>
+              <label className={styles.formlabel}>
+                Same Cost Units Taken :
+              </label>
               <input
                 className={styles.put}
                 type="text"
@@ -248,36 +259,39 @@ function TFTForm({ units }) {
                 onChange={updateField}
                 maxLength="2"
               />
-              <Icon
-                name="angle up"
-                color="yellow"
-                onClick={() =>
-                  form.otherTaken < 50
-                    ? setForm((prev) => ({
-                        ...prev,
-                        otherTaken: prev.otherTaken + 1,
-                      }))
-                    : console.log(form.otherTaken)
-                }
-              />
-              <Icon
-                name="angle down"
-                color="yellow"
-                onClick={() =>
-                  form.otherTaken > 0
-                    ? setForm((prev) => ({
-                        ...prev,
-                        otherTaken: prev.otherTaken - 1,
-                      }))
-                    : console.log(form.otherTaken)
-                }
-              />
+              <span className={styles.stack}>
+                <Icon
+                  name="angle up"
+                  color="yellow"
+                  // onClick={() =>
+                  //   form.otherTaken < 50
+                  //     ? setForm((prev) => ({
+                  //         ...prev,
+                  //         otherTaken: prev.otherTaken + 1,
+                  //       }))
+                  //     : console.log(form.otherTaken)
+                  // }
+                  onClick={handleOtherTaken}
+                />
+                <Icon
+                  name="angle down"
+                  color="yellow"
+                  onClick={() =>
+                    form.otherTaken > 0
+                      ? setForm((prev) => ({
+                          ...prev,
+                          otherTaken: prev.otherTaken - 1,
+                        }))
+                      : console.log(form.otherTaken)
+                  }
+                />
+              </span>
               <Popup
                 content="Any units of the same cost that are taken out of the pool"
                 trigger={<Icon name="exclamation circle" color="blue" />}
               />
             </div>
-            <div>
+            <div className={styles.formdiv}>
               <label className={styles.formlabel}>
                 Gold <Icon name="bitcoin" size="big" color="yellow" />:
               </label>
@@ -292,101 +306,68 @@ function TFTForm({ units }) {
                 onChange={updateField}
                 maxLength="3"
               />
-              <Icon
-                name="angle up"
-                color="yellow"
-                size="big"
-                onClick={() =>
-                  form.gold < 990
-                    ? setForm((prev) => ({ ...prev, gold: prev.gold + 10 }))
-                    : console.log("hello there")
-                }
-              />
-              <Icon
-                name="angle up"
-                color="yellow"
-                onClick={() =>
-                  form.gold < 998
-                    ? setForm((prev) => ({ ...prev, gold: prev.gold + 2 }))
-                    : console.log("hello there")
-                }
-              />
-              <Icon
-                name="angle down"
-                color="yellow"
-                onClick={() =>
-                  form.gold >= 4
-                    ? setForm((prev) => ({ ...prev, gold: prev.gold - 2 }))
-                    : console.log("hello there")
-                }
-              />
-              <Icon
-                name="angle down"
-                color="yellow"
-                size="big"
-                onClick={() =>
-                  form.gold >= 10
-                    ? setForm((prev) => ({ ...prev, gold: prev.gold - 10 }))
-                    : console.log("hello there")
-                }
-              />
+              <span className={styles.stack}>
+                <Icon
+                  name="angle up"
+                  color="yellow"
+                  size="big"
+                  onClick={() =>
+                    form.gold < 990
+                      ? setForm((prev) => ({ ...prev, gold: prev.gold + 10 }))
+                      : console.log("hello there")
+                  }
+                />
+                <Icon
+                  name="angle down"
+                  color="yellow"
+                  size="big"
+                  onClick={() =>
+                    form.gold >= 10
+                      ? setForm((prev) => ({ ...prev, gold: prev.gold - 10 }))
+                      : console.log("hello there")
+                  }
+                />
+              </span>
+              <span className={styles.stack}>
+                <Icon
+                  name="angle up"
+                  color="yellow"
+                  onClick={() =>
+                    form.gold < 998
+                      ? setForm((prev) => ({ ...prev, gold: prev.gold + 2 }))
+                      : console.log("hello there")
+                  }
+                />
+                <Icon
+                  name="angle down"
+                  color="yellow"
+                  onClick={() =>
+                    form.gold >= 4
+                      ? setForm((prev) => ({ ...prev, gold: prev.gold - 2 }))
+                      : console.log("hello there")
+                  }
+                />
+              </span>
               <Popup
-                content="Need atleast 2 Gold to roll for new units"
+                content="Need minimum 2 Gold to roll for new units"
                 trigger={<Icon name="exclamation circle" color="blue" />}
               />
             </div>
-            {/* <div>
-              <label className={styles.formlabel}>
-                Copies needed <Icon name="star" color="yellow" />:
-              </label>
-
-              <input
-                className={styles.put}
-                type="text"
-                name="duplicate"
-                value={form.duplicate}
-                min="1"
-                max="99"
-                onChange={updateField}
-                maxLength="1"
-              />
-              <Icon
-                name="angle up"
-                color="yellow"
-                onClick={() =>
-                  form.duplicate < 3
-                    ? setForm((prev) => ({
-                        ...prev,
-                        duplicate: prev.duplicate + 1,
-                      }))
-                    : console.log("hello there")
-                }
-              />
-              <Icon
-                name="angle down"
-                color="yellow"
-                onClick={() =>
-                  form.duplicate > 1
-                    ? setForm((prev) => ({
-                        ...prev,
-                        duplicate: prev.duplicate - 1,
-                      }))
-                    : console.log("hello there")
-                }
-              />
-            </div> */}
           </div>
+          <Grid.Row>
+            <div className={styles.pad}>
+              <Button
+                content="Calculate"
+                color="yellow"
+                inverted
+                onClick={calculate}
+                size="large"
+              />
+            </div>
+          </Grid.Row>
         </Grid.Column>
       </Grid.Row>
-      <Grid.Row>
-        <Button
-          content="Calculate"
-          color="teal"
-          inverted
-          onClick={calculate}
-          size="large"
-        />
-      </Grid.Row>
+
       <div className="result">
         <Grid.Row>
           {answer !== null ? (

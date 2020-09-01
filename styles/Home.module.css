@@ -4,12 +4,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/Images/Set3/splash1.jpg");
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  /* align-items: center; */
-  /* background-color: black; */
 }
 .content {
   width: 100%;
@@ -72,6 +66,15 @@
   align-items: center;
   align-content: center;
 }
+.formdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+}
 .footer {
   width: 100%;
   height: 100px;
@@ -82,6 +85,33 @@
 }
 .boxheader {
   color: white;
+}
+.setButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+.setButt {
+  margin: 1em;
+  background: transparent;
+  border: none;
+  color: white;
+  text-shadow: white 0px 0px 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.pad {
+  margin-top: 1em;
+}
+.formhead {
+  font-size: 24px;
+  color: white;
+  text-shadow: white 0px 0px 10px;
+  text-transform: uppercase;
+}
+.setButt:focus {
+  outline: 0;
 }
 .put {
   font-size: 32px;

@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Nav from "../components/Nav";
 export default function Home({ units }) {
-  // console.log(units);
-  const [set, setSet] = useState(3);
   return (
     <div className={styles.container}>
       <Head>
@@ -17,14 +15,8 @@ export default function Home({ units }) {
 
       <div className={styles.blur}>
         <Nav />
-        <div className={styles.content}>
-          {set == 3 ? <Form units={units} /> : <Set4Form />}
-        </div>
+        <div className={styles.content}></div>
       </div>
-
-      {/* <footer className={styles.footer}>
-        <span>Rajchwald Bros</span>
-      </footer> */}
     </div>
   );
 }

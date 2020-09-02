@@ -135,8 +135,7 @@ function TFTForm({ units }) {
       }
     }
   };
-  //testing hello gozaimasu
-  // const handleOtherTaken = () => {};
+
   //maps unit list to an array with fields for the drop down
   const unitList = units.map((unit) => {
     return {
@@ -149,6 +148,7 @@ function TFTForm({ units }) {
       },
     };
   });
+
   return (
     <Grid textAlign="center" columns={2} container stackable inverted>
       <Grid.Row>
@@ -164,7 +164,7 @@ function TFTForm({ units }) {
             fluid
           />
         </Grid.Column>
-        {/* <Grid.Column width={3}></Grid.Column> */}
+
         <Grid.Column width={5}>
           <div className={styles.border}>
             <div>
@@ -194,7 +194,7 @@ function TFTForm({ units }) {
                               ...prev,
                               level: prev.level + 1,
                             }))
-                          : console.log(form.level)
+                          : () => console.log(form.level)
                       }
                     />
                   </Item>
@@ -228,7 +228,7 @@ function TFTForm({ units }) {
                   onClick={() =>
                     form.taken < 50
                       ? setForm((prev) => ({ ...prev, taken: prev.taken + 1 }))
-                      : console.log(form.taken)
+                      : () => console.log(form.taken)
                   }
                 />
                 <Icon
@@ -237,7 +237,7 @@ function TFTForm({ units }) {
                   onClick={() =>
                     form.taken >= 1
                       ? setForm((prev) => ({ ...prev, taken: prev.taken - 1 }))
-                      : console.log(form.taken)
+                      : () => console.log(form.taken)
                   }
                 />
               </span>
@@ -264,7 +264,7 @@ function TFTForm({ units }) {
                 <Icon
                   name="angle up"
                   color="yellow"
-                  onClick={console.log("yeet")}
+                  onClick={() => console.log("yeet")}
                 />
                 <Icon
                   name="angle down"
@@ -275,7 +275,7 @@ function TFTForm({ units }) {
                           ...prev,
                           otherTaken: prev.otherTaken - 1,
                         }))
-                      : console.log(form.otherTaken)
+                      : () => console.log(form.otherTaken)
                   }
                 />
               </span>
@@ -317,7 +317,7 @@ function TFTForm({ units }) {
                   onClick={() =>
                     form.gold >= 10
                       ? setForm((prev) => ({ ...prev, gold: prev.gold - 10 }))
-                      : console.log("hello there")
+                      : () => console.log("hello there")
                   }
                 />
               </span>
@@ -328,7 +328,7 @@ function TFTForm({ units }) {
                   onClick={() =>
                     form.gold < 998
                       ? setForm((prev) => ({ ...prev, gold: prev.gold + 2 }))
-                      : console.log("hello there")
+                      : () => console.log("hello there")
                   }
                 />
                 <Icon
@@ -337,7 +337,7 @@ function TFTForm({ units }) {
                   onClick={() =>
                     form.gold >= 4
                       ? setForm((prev) => ({ ...prev, gold: prev.gold - 2 }))
-                      : console.log("hello there")
+                      : () => console.log("hello there")
                   }
                 />
               </span>

@@ -1,5 +1,3 @@
-import { Popup } from "semantic-ui-react";
-
 const lvl_db = {
   1: [1, 0, 0, 0, 0],
   2: [1, 0, 0, 0, 0],
@@ -57,7 +55,7 @@ const rand_set = () => {
   return [rand_one, rand_two, rand_three, rand_four, rand_five];
 };
 
-const Calc = ({ champ, level, taken, otherTaken, gold}) => {
+const Calc = ({ champ, level, taken, otherTaken, gold }) => {
   if (gold % 2 === 1) {
     gold = gold - 1;
   }

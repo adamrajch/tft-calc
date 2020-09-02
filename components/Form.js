@@ -264,15 +264,7 @@ function TFTForm({ units }) {
                 <Icon
                   name="angle up"
                   color="yellow"
-                  // onClick={() =>
-                  //   form.otherTaken < 50
-                  //     ? setForm((prev) => ({
-                  //         ...prev,
-                  //         otherTaken: prev.otherTaken + 1,
-                  //       }))
-                  //     : console.log(form.otherTaken)
-                  // }
-                  onClick={handleOtherTaken}
+                  onClick={console.log("yeet")}
                 />
                 <Icon
                   name="angle down"

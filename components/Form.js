@@ -135,6 +135,7 @@ function TFTForm({ units }) {
       }
     }
   };
+  //testing hello gozaimasu
   // const handleOtherTaken = () => {};
   //maps unit list to an array with fields for the drop down
   const unitList = units.map((unit) => {

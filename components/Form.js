@@ -379,7 +379,7 @@ function TFTForm({ units }) {
                   {answer.map((stat, i) => {
                     if (i == 0) {
                       return (
-                        <Statistic color="yellow" inverted>
+                        <Statistic color="yellow" inverted key={stat}>
                           <Statistic.Label color="yellow">
                             {i + 1} Copy
                           </Statistic.Label>

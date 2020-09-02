@@ -13,10 +13,15 @@ export default function Set4({ units }) {
     </div>
   );
 }
-Set4.getInitialProps = async () => {
+export async function getStaticProps() {
   //fetch data on server
   const url = "http://localhost:3000/api/units";
   const response = await axios.get(url);
   //return response data as an object, merged with existing props
-  return { units: response.data };
-};
+
+  return {
+    props: {
+      units: response.data,
+    },
+  };
+}

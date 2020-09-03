@@ -2,7 +2,8 @@ import Form from "../components/Form";
 import axios from "axios";
 import Nav from "../components/Nav";
 import page from "../styles/Page.module.css";
-export default function Set3({ units }) {
+
+function Set3({ units }) {
   return (
     <div className={page.container3}>
       <div className={page.content}>
@@ -26,3 +27,5 @@ export async function getStaticProps() {
     revalidate: 1,
   };
 }
+
+export default Set3;

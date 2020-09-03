@@ -2,7 +2,7 @@ import Form from "../components/Form";
 import axios from "axios";
 import Nav from "../components/Nav";
 import page from "../styles/Page.module.css";
-
+import { getUnits } from "../components/getUnits";
 function Set3({ units }) {
   return (
     <div className={page.container3}>
@@ -17,12 +17,12 @@ function Set3({ units }) {
 
 export async function getStaticProps() {
   //fetch data on server
-  const url = "http://localhost:3000/api/units";
-  const response = await axios.get(url);
-
+  // const url = "http://localhost:3000/api/units";
+  // const response = await axios.get(url);
+  const units = getUnits();
   return {
     props: {
-      units: response.data,
+      units,
     },
     revalidate: 1,
   };

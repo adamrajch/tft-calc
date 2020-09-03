@@ -388,7 +388,7 @@ function TFTForm({ units }) {
                       );
                     } else {
                       return (
-                        <Statistic color="yellow" inverted>
+                        <Statistic color="yellow" inverted key={stat}>
                           <Statistic.Label color="yellow">
                             {i + 1} Copies
                           </Statistic.Label>

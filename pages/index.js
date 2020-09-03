@@ -1,10 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-// import Header from "../components/Header";
-// import Form from "../components/Form";
-// import Set4Form from "../components/Set4Form";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
 import Nav from "../components/Nav";
 export default function Home() {
   return (

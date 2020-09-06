@@ -94,21 +94,11 @@
     "pool": 29,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.9/game/assets/characters/tahmkench/hud/tahm_square.png",
+      "https://raw.communitydragon.org/10.9/game/assets/characters/tahmkench/hud/tahmkench_square.png",
       "https://raw.communitydragon.org/10.9/game/assets/characters/tahmkench/hud/tahmkench_circle_3.png"
     ]
   },
-  {
-    "name": "Tahm Kench",
-    "traits": ["Brawler", "Fortune"],
-    "cost": 1,
-    "pool": 29,
-    "all": 377,
-    "image": [
-      "https://raw.communitydragon.org/10.9/game/assets/characters/fiora/hud/tahm_square.png",
-      "https://raw.communitydragon.org/10.9/game/assets/characters/fiora/hud/tahmkench_circle_3.png"
-    ]
-  },
+
   {
     "name": "Twisted Fate",
     "traits": ["Cultist", "Mage"],
@@ -171,7 +161,7 @@
     "pool": 22,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/aphelios/hud/aphelios_square.png",
+      "https://raw.communitydragon.org/10.18/game/assets/characters/aphelios/hud/aphelios_square.aphelios.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/aphelios/hud/aphelios_circle_0.aphelios.png"
     ]
   },
@@ -182,7 +172,7 @@
     "pool": 22,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/hecarim/hud/hecarim_square.png",
+      "https://raw.communitydragon.org/10.18/game/assets/characters/hecarim/hud/hecarim_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/hecarim/hud/hecarim_circle_5.png"
     ]
   },
@@ -238,7 +228,7 @@
     "all": 377,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/pyke/hud/pyke_square_0.png",
-      "https://raw.communitydragon.org/10.18/game/assets/characters/pyke/hud/	pyke_circle_9.png"
+      "https://raw.communitydragon.org/10.18/game/assets/characters/pyke/hud/pyke_circle_9.png"
     ]
   },
   {
@@ -252,17 +242,7 @@
       "https://raw.communitydragon.org/10.18/game/assets/characters/sylas/hud/sylas_circle_1.png"
     ]
   },
-  {
-    "name": "Sylas",
-    "traits": ["Moonlight", "Brawler"],
-    "cost": 2,
-    "pool": 22,
-    "all": 377,
-    "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/sylas/hud/sylas_square.png",
-      "https://raw.communitydragon.org/10.18/game/assets/characters/sylas/hud/sylas_circle_1.png"
-    ]
-  },
+
   {
     "name": "Teemo",
     "traits": ["Moonlight", "Brawler"],
@@ -358,8 +338,8 @@
     "pool": 18,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/kalista/hud/kalista_square.png",
-      "https://raw.communitydragon.org/10.18/game/assets/characters/kalista/hud/kalista_circle_5.png"
+      "https://raw.communitydragon.org/10.18/game/assets/characters/kalista/hud/kalista_square_0.png",
+      "https://raw.communitydragon.org/10.18/game/assets/characters/kalista/hud/kalista_circle_1.png"
     ]
   },
   {
@@ -402,7 +382,7 @@
     "pool": 18,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/lux/hud/lux_square.png",
+      "https://raw.communitydragon.org/10.18/game/assets/characters/lux/hud/lux_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/lux/hud/lux_circle_8.png"
     ]
   },
@@ -435,8 +415,8 @@
     "pool": 18,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/xhinzhao/hud/xhinzhao_square_0.png",
-      "https://raw.communitydragon.org/10.18/game/assets/characters/xhinzhao/hud/xinzhao_circle_5.png"
+      "https://raw.communitydragon.org/10.18/game/assets/characters/xinzhao/hud/xinzhao_square_0.png",
+      "https://raw.communitydragon.org/10.18/game/assets/characters/xinzhao/hud/xinzhao_circle_5.png"
     ]
   },
   {
@@ -490,7 +470,7 @@
     "pool": 12,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/cassiopeia/hud/cassiopeia_square.png",
+      "https://raw.communitydragon.org/10.18/game/assets/characters/cassiopeia/hud/cassiopeia_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/cassiopeia/hud/cassiopeia_circle_9.pie_c_10_16.png"
     ]
   },
@@ -573,17 +553,6 @@
   },
 
   {
-    "name": "Warwick",
-    "traits": ["Divine", "Brawler", "Hunter"],
-    "cost": 4,
-    "pool": 12,
-    "all": 377,
-    "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/warwick/hud/warwick_square_0.png",
-      "https://raw.communitydragon.org/10.18/game/assets/characters/warwick/hud/warwick_circle_10.png"
-    ]
-  },
-  {
     "name": "Azir",
     "traits": ["Warlord", "Keeper", "Emperor"],
     "cost": 5,
@@ -645,7 +614,7 @@
     "pool": 10,
     "all": 377,
     "image": [
-      "https://raw.communitydragon.org/10.18/game/assets/characters/sett/hud/sett_square.png",
+      "https://raw.communitydragon.org/10.18/game/assets/characters/sett/hud/sett_square.sett.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/sett/hud/sett_circle_0.sett.png"
     ]
   },

@@ -17,7 +17,7 @@ export async function getStaticProps() {
   //fetch data on server
   // const url = "http://localhost:3000/api/units";
   // const response = await axios.get(url);
-  const units = getUnits();
+  const units = getUnits(4);
   return {
     props: {
       units,

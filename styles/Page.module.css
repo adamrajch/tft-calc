@@ -12,12 +12,13 @@
   padding: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/Images/Set4/splash1.jpg");
+  background-image: url("/Images/Set4/yone.jpg");
 }
 .content {
   height: 100vh;
   background: rgba(57, 14, 14, 0.2);
-  backdrop-filter: blur(2px);
+
+  backdrop-filter: blur(8px);
 }
 
 .head {

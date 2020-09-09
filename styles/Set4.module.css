@@ -3,12 +3,12 @@
 }
 .calculate {
   color: white;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
   margin-top: 1em;
+  border: 1px lightblue solid;
 }
-.answer {
-  border: 1px gold solid;
-}
+
 .stack {
   display: flex;
   flex-direction: column;
@@ -17,4 +17,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.border {
+  border: 1px solid gold;
+  border-radius: 1em;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1em 1em;
+  color: white;
+}
+.boxanswer {
+  border: 2px solid gold;
+  border-radius: 1em;
+  padding: 1em 2em;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 16px;
+}
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.put {
+  font-size: 32px;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  text-align: center;
+  width: 20%;
+  color: white;
+  background-color: transparent;
+}
+.formlabel {
+  color: white;
+  font-size: 18px;
+}
+
+.put:focus,
+.put:focus {
+  outline: none;
+}
+
+.pad {
+  margin-top: 1em;
 }

@@ -27,3 +27,8 @@
   font-size: 48px;
   color: white;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}

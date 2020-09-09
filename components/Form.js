@@ -135,7 +135,16 @@ function TFTForm({ units }) {
       }
     }
   };
-
+  const handleOtherTaken = () => {
+    if (!form.champ.cost) {
+      setForm((prev) => ({ ...prev, otherTaken: prev.otherTaken + 1 }));
+    } else {
+      const num = form.champ.all - form.taken;
+      if (form.otherTaken < num) {
+        setForm((prev) => ({ ...prev, otherTaken: prev.otherTaken + 1 }));
+      }
+    }
+  };
   //maps unit list to an array with fields for the drop down
   const unitList = units.map((unit) => {
     return {
@@ -264,7 +273,7 @@ function TFTForm({ units }) {
                 <Icon
                   name="angle up"
                   color="yellow"
-                  onClick={() => console.log("yeet")}
+                  onClick={handleOtherTaken}
                 />
                 <Icon
                   name="angle down"

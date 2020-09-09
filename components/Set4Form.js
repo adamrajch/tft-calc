@@ -33,20 +33,60 @@ export default function Set4Form({ units }) {
     }
 
     if (form.champ.cost) {
-      setAnswer(calc(form));
+      if (form.champ.pool == form.taken) {
+        setAnswer([0, 0, 0]);
+      } else {
+        setAnswer(calc(form));
+      }
     }
   };
-  function handleChange(e) {
-    if (isNaN(parseInt(e.target.value))) {
-      console.log("value ", e.target.value);
-    } else {
-      const daba = parseInt(e.target.value, 10);
-      if (daba % 10 === 0) {
-        return;
-      }
-      setVal(daba % 10);
+
+  useEffect(() => {
+    if (form.champ.pool < form.taken) {
+      setForm({ ...form, taken: form.champ.pool - 1 });
     }
-  }
+    if (form.otherTaken > form.champ.all - form.taken) {
+      const newOT = form.champ.all - form.taken - 1;
+      setForm({ ...form, otherTaken: newOT });
+    }
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.champ]);
+  useEffect(() => {
+    console.log(answer);
+  }, [answer]);
+
+  useEffect(() => {
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.level]);
+  useEffect(() => {
+    if (form.champ.cost && form.taken > form.champ.pool) {
+      setForm({ ...form, taken: form.champ.pool });
+    }
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.taken]);
+  useEffect(() => {
+    if (form.champ.cost && form.otherTaken > form.champ.all - form.taken) {
+      setForm({ ...form, otherTaken: form.champ.all - form.taken });
+    }
+    if (answer) {
+      setAnswer(calc(form));
+    }
+  }, [form.otherTaken]);
+  useEffect(() => {
+    if (answer) {
+      if (form.gold === 1) {
+      } else {
+        setAnswer(calc(form));
+      }
+    }
+  }, [form.gold]);
+
   const handleDrop = (e, { value }) => {
     const selected = units.find((champ) => champ.name === value);
 
@@ -97,7 +137,7 @@ export default function Set4Form({ units }) {
         setForm({ ...form, level: mod });
       } else if (form.champ.cost === 2 && mod >= 2) {
         setForm({ ...form, level: mod });
-      } else if (form.champ.cost === 3 && mod >= 3) {
+      } else if (form.champ.cost === 3 && mod >= 4) {
         setForm({ ...form, level: mod });
       } else if (form.champ.cost === 4 && mod >= 5) {
         setForm({ ...form, level: mod });
@@ -133,6 +173,23 @@ export default function Set4Form({ units }) {
         setForm((prev) => ({ ...prev, level: prev.level - 1 }));
       } else if (form.champ.cost === 5 && form.level > 7) {
         setForm((prev) => ({ ...prev, level: prev.level - 1 }));
+      }
+    }
+  };
+  const handleCopies = () => {
+    if (!form.champ.pool) {
+      setForm((prev) => ({ ...prev, taken: prev.taken + 1 }));
+    } else {
+      if (form.champ.cost === 1 && form.taken < form.champ.pool) {
+        setForm((prev) => ({ ...prev, taken: prev.taken + 1 }));
+      } else if (form.champ.cost === 2 && form.taken < form.champ.pool) {
+        setForm((prev) => ({ ...prev, taken: prev.taken + 1 }));
+      } else if (form.champ.cost === 3 && form.taken < form.champ.pool) {
+        setForm((prev) => ({ ...prev, taken: prev.taken + 1 }));
+      } else if (form.champ.cost === 4 && form.taken < form.champ.pool) {
+        setForm((prev) => ({ ...prev, taken: prev.taken + 1 }));
+      } else if (form.champ.cost === 5 && form.taken < form.champ.pool) {
+        setForm((prev) => ({ ...prev, taken: prev.taken + 1 }));
       }
     }
   };
@@ -220,18 +277,7 @@ export default function Set4Form({ units }) {
                 maxLength="2"
               />
               <span className={styles.stack}>
-                <Icon
-                  name="angle up"
-                  color="yellow"
-                  onClick={() =>
-                    form.taken < 50
-                      ? setForm((prev) => ({
-                          ...prev,
-                          taken: prev.taken + 1,
-                        }))
-                      : () => console.log(form.taken)
-                  }
-                />
+                <Icon name="angle up" color="yellow" onClick={handleCopies} />
                 <Icon
                   name="angle down"
                   color="yellow"
@@ -351,30 +397,71 @@ export default function Set4Form({ units }) {
               />
             </div>
           </div>
-          <button className={styles.calculate} onClick={calculate}>
-            Calculate
-          </button>
+          <div className={styles.pad}>
+            <Button
+              content="Calculate"
+              color="yellow"
+              inverted
+              onClick={calculate}
+              size="large"
+            />
+          </div>
         </Grid.Column>
       </Grid.Row>
-      <Grid.Row>
-        {answer ? (
-          <div className={styles.answer}>
-            <Item>
-              <Item.Image src={form.champ.image[1]} />
-              <Item.Content>
-                <Item.Header>
-                  <h1 className={styles.boxheader}>{form.champ.name}</h1>
-                </Item.Header>
-                {form.champ.traits.map((trait) => {
-                  return <span>{trait}</span>;
-                })}
-              </Item.Content>
-            </Item>
-          </div>
-        ) : (
-          <></>
-        )}
-      </Grid.Row>
+      <div className="result">
+        <Grid.Row>
+          {answer !== null ? (
+            <div className={styles.boxanswer}>
+              Probability to be offered 1 to 3 copies based on game state
+              <div className={styles.answer}>
+                <Item>
+                  <Item.Image src={form.champ.image[1]} />
+                  <Item.Content>
+                    <Item.Header>
+                      <h1 className={styles.boxheader}>{form.champ.name}</h1>
+                    </Item.Header>
+                  </Item.Content>
+                </Item>
+                <Statistic.Group>
+                  {answer.map((stat, i) => {
+                    if (i == 0) {
+                      return (
+                        <Statistic color="yellow" inverted key={stat}>
+                          <Statistic.Label color="yellow">
+                            {i + 1} Copy
+                          </Statistic.Label>
+                          <Statistic.Value>{stat}%</Statistic.Value>
+                        </Statistic>
+                      );
+                    } else {
+                      return (
+                        <Statistic color="yellow" inverted key={stat + i}>
+                          <Statistic.Label color="yellow">
+                            {i + 1} Copies
+                          </Statistic.Label>
+                          <Statistic.Value>{stat}%</Statistic.Value>
+                        </Statistic>
+                      );
+                    }
+                  })}
+                </Statistic.Group>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className={styles.border}>
+                Calculate the probability to be offered 1 to 3 copies of the
+                desired unit given the game state
+              </div>
+            </>
+          )}
+        </Grid.Row>
+        <style jsx>{`
+          .result {
+            margin-top: 2em;
+          }
+        `}</style>
+      </div>
     </Grid>
   );
 }

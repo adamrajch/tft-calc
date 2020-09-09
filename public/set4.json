@@ -148,7 +148,7 @@
     "traits": ["Fortune", "Mage"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/annie/hud/annie_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/annie/hud/annie_circle_8.png"
@@ -159,7 +159,7 @@
     "traits": ["Moonlight", "Hunter"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/aphelios/hud/aphelios_square.aphelios.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/aphelios/hud/aphelios_circle_0.aphelios.png"
@@ -170,7 +170,7 @@
     "traits": ["Elderwood", "Vanguard"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/hecarim/hud/hecarim_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/hecarim/hud/hecarim_circle_5.png"
@@ -181,7 +181,7 @@
     "traits": ["Enlightened", "Mystic"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/janna/hud/janna_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/janna/hud/janna_circle_8.png"
@@ -192,7 +192,7 @@
     "traits": ["Warlord", "Keeper"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/jarvaniv/hud/jarvaniv_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/jarvaniv/hud/jarvaniv_circle_5.png"
@@ -203,7 +203,7 @@
     "traits": ["Divine", "Duelist"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/jax/hud/jax_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/jax/hud/jax_circle_13.png"
@@ -214,7 +214,7 @@
     "traits": ["Elderwood", "Mage"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/lulu/hud/lulu_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/lulu/hud/lulu_circle_0.png"
@@ -225,7 +225,7 @@
     "traits": ["Divine", "Duelist"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/pyke/hud/pyke_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/pyke/hud/pyke_circle_9.png"
@@ -236,7 +236,7 @@
     "traits": ["Moonlight", "Brawler"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/sylas/hud/sylas_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/sylas/hud/sylas_circle_1.png"
@@ -248,7 +248,7 @@
     "traits": ["Moonlight", "Brawler"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/teemo/hud/teemo_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/teemo/hud/teemo_circle_27.prestige_teemo_spiritblossom.png"
@@ -259,7 +259,7 @@
     "traits": ["Dusk", "Vanguard"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/thresh/hud/thresh_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/thresh/hud/thresh_circle_17.pie_c_10_15.png"
@@ -270,7 +270,7 @@
     "traits": ["Warlord", "Brawler"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/vi/hud/vi_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/vi/hud/vi_circle_5.png"
@@ -281,7 +281,7 @@
     "traits": ["Ninja", "Shade"],
     "cost": 2,
     "pool": 22,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/zed/hud/zed_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/zed/hud/zed_circle_0.png"
@@ -292,7 +292,7 @@
     "traits": ["Ninja", "Assassin"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/akali/hud/akali_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/akali/hud/akali_circle.png"
@@ -303,7 +303,7 @@
     "traits": ["Cultist", "Shade"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/evelynn/hud/evelynn_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/evelynn/hud/evelynn_circle_5.png"
@@ -314,7 +314,7 @@
     "traits": ["Divine", "Enlightened", "Adept"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/irelia/hud/irelia_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/irelia/hud/irelia_circle_6.png"
@@ -325,7 +325,7 @@
     "traits": ["Fortune", "Sharpshooter"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/jinx/hud/jinx_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/jinx/hud/jinx_circle_2.png"
@@ -336,7 +336,7 @@
     "traits": ["Cultist", "Duelist"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/kalista/hud/kalista_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/kalista/hud/kalista_circle_1.png"
@@ -347,7 +347,7 @@
     "traits": ["Fortune", "Assassin"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/katarina/hud/katarina_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/katarina/hud/katarina_circle_8.png"
@@ -358,7 +358,7 @@
     "traits": ["Ninja", "Keeper"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/kennen/hud/kennen_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/kennen/hud/kennen_circle.png"
@@ -369,7 +369,7 @@
     "traits": ["Spirit", "Hunter"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/kindred/hud/kindred_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/kindred/hud/kindred_circle_3.pie_c_10_16.png"
@@ -380,7 +380,7 @@
     "traits": ["Divine", "Dazzler"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/lux/hud/lux_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/lux/hud/lux_circle_8.png"
@@ -391,7 +391,7 @@
     "traits": ["Elderwood", "Brawler"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/nunu/hud/nunu_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/nunu/hud/nunu_circle_1.png"
@@ -402,7 +402,7 @@
     "traits": ["Elderwood", "Mage"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/veigar/hud/veigar_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/veigar/hud/veigar_circle_13.png"
@@ -413,7 +413,7 @@
     "traits": ["Warlord", "Duelist"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/xinzhao/hud/xinzhao_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/xinzhao/hud/xinzhao_circle_5.png"
@@ -424,7 +424,7 @@
     "traits": ["Spirit", "Mystic"],
     "cost": 3,
     "pool": 18,
-    "all": 377,
+    "all": 286,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/yuumi/hud/yuumi_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/yuumi/hud/yuumi_circle_0.png"
@@ -435,7 +435,7 @@
     "traits": ["Cultist", "Vanguard"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/aatrox/hud/aatrox_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/aatrox/hud/aatrox_circle_7.png"
@@ -446,7 +446,7 @@
     "traits": ["Spirit", "Mage"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/ahri/hud/ahri_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/ahri/hud/ahri_circle_27.pie_c_10_16.png"
@@ -457,7 +457,7 @@
     "traits": ["Elderwood", "Hunter"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/ashe/hud/ashe_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/ashe/hud/ashe_circle_17.chroma_ashe_highnoon.png"
@@ -468,7 +468,7 @@
     "traits": ["Dusk", "Mystic", "Dazzler"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/cassiopeia/hud/cassiopeia_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/cassiopeia/hud/cassiopeia_circle_9.pie_c_10_16.png"
@@ -479,7 +479,7 @@
     "traits": ["Cultist", "Sharpshooter"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/jhin/hud/jhin_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/jhin/hud/jhin_circle_2.png"
@@ -490,7 +490,7 @@
     "traits": ["Dazzler", "Enlightened"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/morgana/hud/morgana_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/morgana/hud/morgana_circle_17.pie_c_9_19.png"
@@ -501,7 +501,7 @@
     "traits": ["Dusk", "Keeper"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/riven/hud/riven_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/riven/hud/riven_circle_23.pie_c_10_16.png"
@@ -512,7 +512,7 @@
     "traits": ["Fortune", "Vanguard"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/sejuani/hud/sejuani_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/sejuani/hud/sejuani_circle_8.png"
@@ -523,7 +523,7 @@
     "traits": ["Enlightened", "Assassin"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/talon/hud/talon_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/talon/hud/talon_circle_12.png"
@@ -534,7 +534,7 @@
     "traits": ["Ninja", "Mystic"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/shen/hud/shen_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/shen/hud/shen_circle.png"
@@ -545,7 +545,7 @@
     "traits": ["Divine", "Brawler", "Hunter"],
     "cost": 4,
     "pool": 12,
-    "all": 377,
+    "all": 120,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/warwick/hud/warwick_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/warwick/hud/warwick_circle_10.png"
@@ -557,7 +557,7 @@
     "traits": ["Warlord", "Keeper", "Emperor"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/azir/hud/azir_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/azir/hud/azir_circle_4.png"
@@ -568,7 +568,7 @@
     "traits": ["Shade", "Tormented"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/kayn/hud/kayn_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/kayn/hud/kayn_circle.png"
@@ -579,7 +579,7 @@
     "traits": ["Elderwood", "Dazzler"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/ezreal/hud/ezreal_square_0.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/ezreal/hud/ezreal_circle_1.png"
@@ -590,7 +590,7 @@
     "traits": ["Divine", "Duelist"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/leesin/hud/leesin_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/leesin/hud/leesin_circle_11.png"
@@ -601,7 +601,7 @@
     "traits": ["Dusk", "Mage"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/lillia/hud/lillia_square.lillia.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/lillia/hud/lillia_circle_1.lillia.png"
@@ -612,7 +612,7 @@
     "traits": ["Brawler", "The Boss"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/sett/hud/sett_square.sett.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/sett/hud/sett_circle_0.sett.png"
@@ -623,7 +623,7 @@
     "traits": ["Exile", "Adept"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/yone/hud/yone_square.yone.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/yone/hud/yone_circle_0.yone.png"
@@ -634,7 +634,7 @@
     "traits": ["Cultist", "Mystic"],
     "cost": 5,
     "pool": 10,
-    "all": 377,
+    "all": 80,
     "image": [
       "https://raw.communitydragon.org/10.18/game/assets/characters/zilean/hud/chronokeeper_square.png",
       "https://raw.communitydragon.org/10.18/game/assets/characters/zilean/hud/zilean_circle_5.png"

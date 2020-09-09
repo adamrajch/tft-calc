@@ -124,13 +124,13 @@ const Calc = ({ champ, level, taken, otherTaken, gold }) => {
     }
   }
 
-  // return [
-  //   first_result.toFixed(2),
-  //   second_result.toFixed(2),
-  //   third_result.toFixed(2),
-  // ];
-  // console.log(returnedAnswer);
-  return returnedAnswer;
+  return [
+    first_result.toFixed(2),
+    second_result.toFixed(2),
+    third_result.toFixed(2),
+  ];
+  // // console.log(returnedAnswer);
+  // return returnedAnswer;
 };
 
 // let wang = rand_set();

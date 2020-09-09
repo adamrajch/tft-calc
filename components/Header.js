@@ -4,7 +4,7 @@ export default function Title() {
   return (
     <span className={styles.header}>
       <Image src="/Images/Set3/tftpenguin.png" size="tiny" />
-      <h1 className={styles.logo}>TFT Calculator</h1>
+      <h1 className={styles.logo}>TFT Calc</h1>
       <Image src="/Images/tftlogo.png" size="tiny" />
     </span>
   );

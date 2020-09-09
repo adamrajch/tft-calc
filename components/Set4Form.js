@@ -72,7 +72,8 @@ export default function Set4Form({ units }) {
   }, [form.taken]);
   useEffect(() => {
     if (form.champ.cost && form.otherTaken > form.champ.all - form.taken) {
-      setForm({ ...form, otherTaken: form.champ.all - form.taken });
+      setForm({ ...form, otherTaken: form.champ.all - form.taken - 1 });
+      setAnswer(calc(form));
     }
     if (answer) {
       setAnswer(calc(form));
@@ -193,6 +194,17 @@ export default function Set4Form({ units }) {
       }
     }
   };
+  const handleOtherTaken = () => {
+    if (!form.champ.pool) {
+      setForm((prev) => ({ ...prev, otherTaken: prev.otherTaken + 1 }));
+    } else {
+      const num = form.champ.all - form.taken;
+      console.log(form.champ.all - form.taken);
+      if (form.otherTaken < num - 1) {
+        setForm((prev) => ({ ...prev, otherTaken: prev.otherTaken + 1 }));
+      }
+    }
+  };
   const unitList = units.map((unit) => {
     return {
       key: unit.name,
@@ -308,13 +320,13 @@ export default function Set4Form({ units }) {
                 min="1"
                 max="99"
                 onChange={updateField}
-                maxLength="2"
+                maxLength="3"
               />
               <span className={styles.stack}>
                 <Icon
                   name="angle up"
                   color="yellow"
-                  onClick={() => console.log("yeet")}
+                  onClick={handleOtherTaken}
                 />
                 <Icon
                   name="angle down"
@@ -398,13 +410,9 @@ export default function Set4Form({ units }) {
             </div>
           </div>
           <div className={styles.pad}>
-            <Button
-              content="Calculate"
-              color="yellow"
-              inverted
-              onClick={calculate}
-              size="large"
-            />
+            <button className={styles.butt} onClick={calculate}>
+              Calculate
+            </button>
           </div>
         </Grid.Column>
       </Grid.Row>
@@ -439,7 +447,9 @@ export default function Set4Form({ units }) {
                           <Statistic.Label color="yellow">
                             {i + 1} Copies
                           </Statistic.Label>
-                          <Statistic.Value>{stat}%</Statistic.Value>
+                          <Statistic.Value>
+                            {stat > 0.001 ? stat : "<0.01"}%
+                          </Statistic.Value>
                         </Statistic>
                       );
                     }

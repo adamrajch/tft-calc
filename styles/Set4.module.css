@@ -68,11 +68,14 @@
 }
 
 .butt {
-  background: rgba(60, 170, 243, 0.5);
-  backdrop-filter: blur(2px);
+  background: rgba(3, 86, 141, 0.5);
+  backdrop-filter: blur(4px);
   /* background-color: white; */
   border: 1px solid white;
   color: white;
   padding: 1em 1.5em 1em 1.5em;
   border-radius: 5px;
+}
+.butt:focus {
+  outline: 0;
 }

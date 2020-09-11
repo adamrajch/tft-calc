@@ -3,16 +3,17 @@
   padding: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/Images/Set3/splash1.jpg");
+  background-image: url("/Images/homeplash.jpg");
 }
 .content {
   width: 100%;
   min-height: 90vh;
   padding-top: 4em;
-  /* background: rgba(57, 14, 14, 0.2);
-  backdrop-filter: blur(6px); */
-
-  /* background: rgba(255, 255, 255, 0.2); */
+  display: flex;
+  height: 100%;
+  /* overflow-y: auto; */
+  /* justify-content: center; */
+  flex-direction: column;
 }
 .header {
   padding: 0;
@@ -21,19 +22,32 @@
   text-align: center;
   height: 10vh;
   color: white;
-  font-size: 36px;
+  font-size: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .blur {
-  background: rgba(57, 14, 14, 0.2);
-  backdrop-filter: blur(6px);
+  background: rgba(89, 16, 207, 0.2);
+  backdrop-filter: blur(3px);
+  object-fit: cover;
+  overflow: none;
 }
 .logo {
-  font-size: 38px;
+  font-size: 26px;
   text-shadow: white 0px 0px 10px;
   text-transform: uppercase;
+}
+.noPad {
+  padding: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.indexLogo {
+  text-align: center;
+  color: white;
+  margin-bottom: 2em;
+  font-size: 28px;
 }
 .main {
   /* padding: 5rem 0; */
@@ -177,7 +191,13 @@
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
-
+.textPara {
+  font-size: 20px;
+  color: white;
+  text-shadow: white 0px 0px 10px;
+  /* background: rgba(228, 226, 231, 0.2);
+  backdrop-filter: blur(3px); */
+}
 .grid {
   display: flex;
   align-items: center;
@@ -187,37 +207,81 @@
   max-width: 800px;
   margin-top: 3rem;
 }
+.spacer {
+  margin-top: 4em;
+}
+.heroSpacer {
+  /* border: 1px solid gold; */
 
+  display: flex;
+  justify-content: center;
+}
 .card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
+  border: 3px solid gold;
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  /* max-width: 480px;
+  height: 490px; */
 }
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.cardsection {
+  display: flex;
+  justify-content: center;
+  max-width: 420px;
 }
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.cardContainer {
+  border: 3px solid gold;
+  background: transparent;
+  color: white;
+  max-height: 360px;
 }
+/* .heroImg {
+  border-radius: 50%;
+  max-width: 50%;
+} */
+.circle {
+  border-radius: 50%;
+  height: 480px;
+  width: 480px;
+  overflow: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.cardText {
+  padding-left: 1em;
+}
+.hero {
+  border: white 1px solid;
+  width: 50%;
+}
+.cardImage {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.text {
+  color: white;
+}
+.patch {
+  color: gold;
+}
+.image {
+  width: 100%;
+}
+.textContainer {
+  background: rgba(18, 79, 209, 0.2);
 
+  backdrop-filter: blur(8px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.calcFont {
+  color: white;
+  text-decoration-line: underline;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;

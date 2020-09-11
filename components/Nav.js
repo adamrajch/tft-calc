@@ -3,8 +3,9 @@ import Router, { useRouter } from "next/router";
 import Header from "../components/Header";
 const Nav = (props) => {
   const navlinks = [
-    { title: "Galaxies", href: "/set3" },
     { title: "Fates", href: "/set4" },
+    { title: "Galaxies", href: "/set3" },
+
     { title: "About", href: "/about" },
   ];
   return (

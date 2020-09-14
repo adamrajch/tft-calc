@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Nav from "../components/Nav";
+import Nav from "../components/ResponsiveNav";
 import { Card, Image, Icon, Grid } from "semantic-ui-react";
 import Link from "next/link";
 export default function Home() {
@@ -34,10 +34,11 @@ export default function Home() {
               columns={3}
               verticalAlign="middle"
               stackable
+              doubling
               // relaxed
               // padded="vertically"
             >
-              <Grid.Row>
+              <Grid.Row centered>
                 {/* <div className={styles.hero}> */}
                 <Grid.Column width={3}>
                   <h1 className={styles.text}>WIN MORE GAMES </h1>

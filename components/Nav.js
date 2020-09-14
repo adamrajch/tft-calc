@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import Header from "../components/Header";
+import Wonger from "./wonger";
 const Nav = (props) => {
   const navlinks = [
     { title: "Fates", href: "/set4" },
@@ -30,6 +31,7 @@ const Nav = (props) => {
             );
           })}
         </ul>
+        <Wonger />
       </nav>
       <style jsx>{`
         .nav {
@@ -38,17 +40,21 @@ const Nav = (props) => {
           align-items: center;
           min-height: 54px;
           min-width: 100%;
+          // font-size:30px;
         }
         .navlinks {
           width: 20%;
           display: flex;
           list-style-type: none;
           justify-content: flex-end;
+     
         }
+     
         a {
             color: white;
             text-shadow: white 0px 0px 10px;
           margin-right:1em;
+          font-size:20px;
         }
         li:hover a:hover {
           color: white;

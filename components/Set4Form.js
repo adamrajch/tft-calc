@@ -218,7 +218,7 @@ export default function Set4Form({ units }) {
     };
   });
   return (
-    <Grid textAlign="center" columns={2} container stackable inverted>
+    <Grid textAlign="center" columns={2} container stackable inverted doubling>
       <Grid.Row>
         <Grid.Column width={5}>
           <Dropdown

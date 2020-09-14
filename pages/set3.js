@@ -1,6 +1,6 @@
 import Form from "../components/Form";
 import axios from "axios";
-import Nav from "../components/Nav";
+import Nav from "../components/ResponsiveNav";
 import page from "../styles/Page.module.css";
 import { getUnits } from "../components/getUnits";
 import { Image } from "semantic-ui-react";

@@ -1,3 +1,9 @@
+import Nav from "../components/ResponsiveNav";
 export default function About() {
-  return <div>about yah yeet</div>;
+  return (
+    <div>
+      <Nav />
+      about yah yeet
+    </div>
+  );
 }

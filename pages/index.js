@@ -38,7 +38,7 @@ export default function Home() {
               // relaxed
               // padded="vertically"
             >
-              <Grid.Row centered>
+              <Grid.Row>
                 {/* <div className={styles.hero}> */}
                 <Grid.Column width={3}>
                   <h1 className={styles.text}>WIN MORE GAMES </h1>

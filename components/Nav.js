@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import Header from "../components/Header";
-import Wonger from "./wonger";
+
 const Nav = (props) => {
   const navlinks = [
     { title: "Fates", href: "/set4" },
@@ -31,7 +31,6 @@ const Nav = (props) => {
             );
           })}
         </ul>
-        <Wonger />
       </nav>
       <style jsx>{`
         .nav {

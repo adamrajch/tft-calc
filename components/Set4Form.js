@@ -468,7 +468,7 @@ export default function Set4Form({ units }) {
         </Grid.Row>
         <style jsx>{`
           .result {
-            margin-top: 2em;
+            margin-top: 0.5em;
           }
         `}</style>
       </div>

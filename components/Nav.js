@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import Header from "../components/Header";
-
+import Head from "next/head";
 const Nav = (props) => {
   const navlinks = [
     { title: "Fates", href: "/set4" },
@@ -46,7 +46,7 @@ const Nav = (props) => {
           display: flex;
           list-style-type: none;
           justify-content: flex-end;
-     
+     font-family: 'Play', sans-serif;
         }
      
         a {
@@ -54,6 +54,7 @@ const Nav = (props) => {
             text-shadow: white 0px 0px 10px;
           margin-right:1em;
           font-size:20px;
+           font-family: 'Play', sans-serif;
         }
         li:hover a:hover {
           color: white;

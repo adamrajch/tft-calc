@@ -118,10 +118,10 @@ const Math = () => {
 
       <style jsx>{`
         .math-wrapper {
-          border: 3px solid black;
+          border: 3px solid white;
           width: 50%;
           margin: auto;
-          color: black;
+          color: white;
           //   padding-bottom: 2em;
         }
         .mathWrap {
@@ -131,7 +131,7 @@ const Math = () => {
           width: 100%;
           height: 100%;
 
-          color: black;
+          color: white;
         }
         sub {
           font-style: italic;

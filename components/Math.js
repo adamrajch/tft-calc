@@ -1,7 +1,8 @@
 import { Grid } from "semantic-ui-react";
 const Math = () => {
   return (
-    <div className="math-wrapper">
+    <Grid container>
+      {/* <div className="math-wrapper"> */}
       <div className="mathWrap">
         <p>
           First, let’s understand how we calculate the probability of getting a
@@ -95,8 +96,8 @@ const Math = () => {
           P <sub>rolls</sub> ( X = 2, R = r ) = P<sub>shop</sub> ( X = 2 )
           <sup>1</sup> (1 - P<sub>shop</sub> ( X = 0))<sup>r - 1</sup> (
           <sub>r</sub> C<sub>1</sub>) + P<sub>shop</sub> ( X = 1 )<sup>2</sup> (
-          X = 1 )<sup>2</sup> (1 - P<sub>shop</sub> ( X = 0))<sup>r - 2</sup> (
-          <sub>r</sub> C<sub>2</sub>)
+          X = 1 )<sup>2</sup> (1 - P<sub>shop</sub> ( X = 0))
+          <sup>r - 2</sup> (<sub>r</sub> C<sub>2</sub>)
         </p>
       </div>
 
@@ -115,14 +116,14 @@ const Math = () => {
           answer.
         </p>
       </div>
-
+      {/* </div> */}
       <style jsx>{`
         .math-wrapper {
           border: 3px solid white;
           width: 50%;
-          margin: auto;
+          margin: 0 1em 0 1em;
           color: white;
-          //   padding-bottom: 2em;
+          // padding-bottom: 2em;
         }
         .mathWrap {
           font-size: 18px;
@@ -130,7 +131,6 @@ const Math = () => {
 
           width: 100%;
           height: 100%;
-
           color: white;
         }
         sub {
@@ -141,7 +141,7 @@ const Math = () => {
           text-align: center;
         }
       `}</style>
-    </div>
+    </Grid>
   );
 };
 export default Math;

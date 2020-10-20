@@ -10,7 +10,7 @@ function Set3({ units }) {
       <div className={page.content}>
         <Nav />
         <div className={page.head}>
-          <Image src="Images/Set3/svglogo.png" size="medium" />
+          <Image src="Images/Set3/svglogo.png" size="mini" />
         </div>
         <Form units={units} />
       </div>

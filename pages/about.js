@@ -10,6 +10,7 @@ export default function About() {
           href="https://fonts.googleapis.com/css2?family=Play&display=swap"
           rel="stylesheet"
         />
+        <title>TFT Calc</title>
       </Head>
       <Nav />
       <div className="header">The Math</div>

@@ -12,6 +12,9 @@ const Nav = (props) => {
   return (
     <>
       <nav className="nav">
+        <Head>
+          <title>TFT Calc</title>
+        </Head>
         <span className="logo">
           <Link href="/">
             <a>

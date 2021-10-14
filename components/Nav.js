@@ -5,9 +5,9 @@ import Head from "next/head";
 const Nav = (props) => {
   const navlinks = [
     { title: "Fates", href: "/set4" },
-    { title: "Galaxies", href: "/set3" },
+    // { title: "Galaxies", href: "/set3" },
 
-    { title: "About", href: "/about" },
+    { title: "The Math", href: "/about" },
   ];
   return (
     <>
